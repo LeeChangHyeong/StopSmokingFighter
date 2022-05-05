@@ -7,10 +7,22 @@
 
 import SwiftUI
 
+
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
+
 struct UserCheckView: View {
-    @State var cigCount: Int?
-    @State var cigPrice: Int?
+    @AppStorage("cigCount") var cigCount: Int?
+    @AppStorage("cigPrice") var cigPrice: Int?
+    
+    
     var body: some View {
+        
         Text("하루 흡연 개비")
             .frame(maxWidth:.infinity, alignment: .leading)
             .padding(.horizontal)
@@ -24,6 +36,7 @@ struct UserCheckView: View {
             .padding(.bottom, 10)
         
         
+        
         Text("피우는 담배 가격(원)")
             .frame(maxWidth:.infinity, alignment: .leading)
             .padding(.horizontal)
@@ -35,6 +48,8 @@ struct UserCheckView: View {
             .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.blue, lineWidth: 1))
             .frame(maxWidth:.infinity, alignment: .leading)
             .padding(.horizontal)
+        
+        
         
         Button("확인"){
             

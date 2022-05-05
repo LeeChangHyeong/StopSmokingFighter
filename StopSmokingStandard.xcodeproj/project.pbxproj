@@ -14,8 +14,8 @@
 		32776FCF2823CCD700927C5B /* StopSmokingStandardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FCE2823CCD700927C5B /* StopSmokingStandardTests.swift */; };
 		32776FD92823CCD800927C5B /* StopSmokingStandardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FD82823CCD800927C5B /* StopSmokingStandardUITests.swift */; };
 		32776FDB2823CCD800927C5B /* StopSmokingStandardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FDA2823CCD800927C5B /* StopSmokingStandardUITestsLaunchTests.swift */; };
-		32776FE82823D10A00927C5B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FE72823D10A00927C5B /* TimerView.swift */; };
-		32776FEA2823D35F00927C5B /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FE92823D35F00927C5B /* Timer.swift */; };
+		32776FE82823D10A00927C5B /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FE72823D10A00927C5B /* TimerManager.swift */; };
+		32776FEA2823D35F00927C5B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FE92823D35F00927C5B /* TimerView.swift */; };
 		32776FEC2823D4E400927C5B /* UserCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FEB2823D4E300927C5B /* UserCheckView.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,8 +47,8 @@
 		32776FD42823CCD800927C5B /* StopSmokingStandardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StopSmokingStandardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32776FD82823CCD800927C5B /* StopSmokingStandardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopSmokingStandardUITests.swift; sourceTree = "<group>"; };
 		32776FDA2823CCD800927C5B /* StopSmokingStandardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopSmokingStandardUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		32776FE72823D10A00927C5B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
-		32776FE92823D35F00927C5B /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		32776FE72823D10A00927C5B /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		32776FE92823D35F00927C5B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		32776FEB2823D4E300927C5B /* UserCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCheckView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,8 +80,9 @@
 		32776FB12823CCD600927C5B = {
 			isa = PBXGroup;
 			children = (
-				32776FE72823D10A00927C5B /* TimerView.swift */,
-				32776FE92823D35F00927C5B /* Timer.swift */,
+				32776FE72823D10A00927C5B /* TimerManager.swift */,
+				32776FE92823D35F00927C5B /* TimerView.swift */,
+				32776FED2823F96A00927C5B /* test */,
 				32776FEB2823D4E300927C5B /* UserCheckView.swift */,
 				32776FBC2823CCD700927C5B /* StopSmokingStandard */,
 				32776FCD2823CCD700927C5B /* StopSmokingStandardTests */,
@@ -134,6 +135,13 @@
 				32776FDA2823CCD800927C5B /* StopSmokingStandardUITestsLaunchTests.swift */,
 			);
 			path = StopSmokingStandardUITests;
+			sourceTree = "<group>";
+		};
+		32776FED2823F96A00927C5B /* test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,11 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32776FE82823D10A00927C5B /* TimerView.swift in Sources */,
+				32776FE82823D10A00927C5B /* TimerManager.swift in Sources */,
 				32776FEC2823D4E400927C5B /* UserCheckView.swift in Sources */,
 				32776FC02823CCD700927C5B /* ContentView.swift in Sources */,
 				32776FBE2823CCD700927C5B /* StopSmokingStandardApp.swift in Sources */,
-				32776FEA2823D35F00927C5B /* Timer.swift in Sources */,
+				32776FEA2823D35F00927C5B /* TimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
