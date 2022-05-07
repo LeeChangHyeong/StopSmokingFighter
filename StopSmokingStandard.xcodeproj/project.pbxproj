@@ -17,6 +17,10 @@
 		32776FE82823D10A00927C5B /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FE72823D10A00927C5B /* TimerManager.swift */; };
 		32776FEA2823D35F00927C5B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FE92823D35F00927C5B /* TimerView.swift */; };
 		32776FEC2823D4E400927C5B /* UserCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FEB2823D4E300927C5B /* UserCheckView.swift */; };
+		32F41A48282627040030E0BF /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F41A47282627040030E0BF /* TabBar.swift */; };
+		32F41A4A282633ED0030E0BF /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F41A49282633ED0030E0BF /* SettingView.swift */; };
+		32F41A4C28265B250030E0BF /* ReasonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F41A4B28265B250030E0BF /* ReasonView.swift */; };
+		32F41A4E282661190030E0BF /* fightingProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F41A4D282661190030E0BF /* fightingProgressViewStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,11 @@
 		32776FE72823D10A00927C5B /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		32776FE92823D35F00927C5B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		32776FEB2823D4E300927C5B /* UserCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCheckView.swift; sourceTree = "<group>"; };
+		32776FEF282436A200927C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		32F41A47282627040030E0BF /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		32F41A49282633ED0030E0BF /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		32F41A4B28265B250030E0BF /* ReasonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonView.swift; sourceTree = "<group>"; };
+		32F41A4D282661190030E0BF /* fightingProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fightingProgressViewStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +90,11 @@
 			isa = PBXGroup;
 			children = (
 				32776FE72823D10A00927C5B /* TimerManager.swift */,
+				32F41A47282627040030E0BF /* TabBar.swift */,
 				32776FE92823D35F00927C5B /* TimerView.swift */,
+				32F41A49282633ED0030E0BF /* SettingView.swift */,
+				32F41A4B28265B250030E0BF /* ReasonView.swift */,
+				32F41A4D282661190030E0BF /* fightingProgressViewStyle.swift */,
 				32776FED2823F96A00927C5B /* test */,
 				32776FEB2823D4E300927C5B /* UserCheckView.swift */,
 				32776FBC2823CCD700927C5B /* StopSmokingStandard */,
@@ -104,6 +117,7 @@
 		32776FBC2823CCD700927C5B /* StopSmokingStandard */ = {
 			isa = PBXGroup;
 			children = (
+				32776FEF282436A200927C5B /* Info.plist */,
 				32776FBD2823CCD700927C5B /* StopSmokingStandardApp.swift */,
 				32776FBF2823CCD700927C5B /* ContentView.swift */,
 				32776FC12823CCD700927C5B /* Assets.xcassets */,
@@ -277,7 +291,11 @@
 				32776FE82823D10A00927C5B /* TimerManager.swift in Sources */,
 				32776FEC2823D4E400927C5B /* UserCheckView.swift in Sources */,
 				32776FC02823CCD700927C5B /* ContentView.swift in Sources */,
+				32F41A4A282633ED0030E0BF /* SettingView.swift in Sources */,
+				32F41A4E282661190030E0BF /* fightingProgressViewStyle.swift in Sources */,
 				32776FBE2823CCD700927C5B /* StopSmokingStandardApp.swift in Sources */,
+				32F41A48282627040030E0BF /* TabBar.swift in Sources */,
+				32F41A4C28265B250030E0BF /* ReasonView.swift in Sources */,
 				32776FEA2823D35F00927C5B /* TimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,8 +455,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StopSmokingStandard/Preview Content\"";
+				DEVELOPMENT_TEAM = FRZRS5Y9L6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StopSmokingStandard/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -465,8 +485,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StopSmokingStandard/Preview Content\"";
+				DEVELOPMENT_TEAM = FRZRS5Y9L6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StopSmokingStandard/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
