@@ -11,7 +11,7 @@ import UIKit
 struct TimerView: View {
     // 변경값을 관찰하기 위해 ObservaleObject 추가
     
-    @ObservedObject var timerManager = TimerManager()
+    @ObservedObject var timerManager: TimerManager
     var days: Int { timerManager.secondsElapsed / (3600 * 24)}
     var hours: Int { timerManager.secondsElapsed / 3600 % 24 }
     var minutes: Int { timerManager.secondsElapsed / 60 % 60 }
@@ -43,14 +43,16 @@ struct TimerView: View {
                 .padding(.vertical)
             
             if touch == false {
-                Button("흡연이 무찌르기 시작!!"){
+                Button {
                     self.showingAlert2.toggle()
-                }
-                .foregroundColor(.black)
-                .padding(.vertical, 20)
-                .padding(.horizontal, 90)
-                .background(.yellow)
-                .cornerRadius(20)
+                } label: {
+                    Text("흡연이 무찌르기 시작!!")
+                    .foregroundColor(.black)
+                    .padding(.vertical, 20)
+                    .padding(.horizontal, 90)
+                    .background(.yellow)
+                    .cornerRadius(20)
+                }                
                 .alert("금연 할 수 있습니다 !!", isPresented: $showingAlert2){
                     // 주요행동
                     Button(role: .destructive) {
@@ -102,7 +104,7 @@ struct TimerView: View {
             
         }.onAppear{
             // current를 쓰면 calander를 아무곳에서 씀
-            if touch{
+            if touch {
                 if timerManager.secondsElapsed == 0 {
                 self.timerManager.start()
                 }
@@ -115,7 +117,6 @@ struct TimerView: View {
                 
                 timerManager.secondsElapsed = duration
             }
-            
         }
     }
 }
