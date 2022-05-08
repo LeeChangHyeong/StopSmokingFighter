@@ -17,9 +17,10 @@ struct TimerView: View {
     var minutes: Int { timerManager.secondsElapsed / 60 % 60 }
     var seconds: Int { timerManager.secondsElapsed % 60 }
 //    @AppStorage("Price") var totalPrice = 0
-    var totalPrice: Int { ((cigPrice ?? 0 / 20) * (cigCount ?? 0))/86400 * timerManager.secondsElapsed}
-    @Binding var cigCount: Int?
-    @Binding var cigPrice: Int?
+    var totalPrice: Double { (((cigPrice ?? 0) / 20) * (cigCount ?? 0))/86400 * Double((timerManager.secondsElapsed))}
+    var numCig: Double {(cigCount ?? 0)/86400 * Double((timerManager.secondsElapsed))}
+    @Binding var cigCount: Double?
+    @Binding var cigPrice: Double?
     @Binding var lose: Int
     
     /// x 개  1개에 225원 (x X 225) / 86400
@@ -73,14 +74,16 @@ struct TimerView: View {
                 }
                 
             } else {
-                Button("포기하기..") {
+                Button{
                     self.showingAlert.toggle()
+                } label: {
+                    Text("포기하기..")
+                        .foregroundColor(.black)
+                        .padding(.vertical, 20)
+                        .padding(.horizontal, 90)
+                        .background(.yellow)
+                        .cornerRadius(20)
                 }
-                .foregroundColor(.black)
-                .padding(.vertical, 20)
-                .padding(.horizontal, 90)
-                .background(.yellow)
-                .cornerRadius(20)
                 .alert("다시 한 번 생각해보세요..", isPresented: $showingAlert) {
                     Button(role: .destructive) {
                         self.timerManager.stop()
@@ -99,8 +102,28 @@ struct TimerView: View {
                 }
             }
             
-            Text("금연해서 아낀 돈: \(totalPrice)원")
-            Text("금연이 사망 횟수: \(lose)회")
+           
+            
+                
+                VStack(alignment: .leading){
+            Text("금연해서 아낀 돈: \(String(format:"%.03lf",((totalPrice))))원")
+            Text("지금까지 안핀 담배갯수: \(String(format:"%.03lf",((numCig))))개")
+            Text("금연해서 얻은 수명: \(String(format:"%.03lf",((numCig*720/60))))분")
+            // 1개에 12분
+            //720초
+                }
+                .foregroundColor(.white)
+                .padding()
+                .background(.black)
+                .cornerRadius(20)
+                Text("금연이 사망 횟수: \(lose)회")
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(.red)
+                    .cornerRadius(20)
+                
+                
+            
             
         }.onAppear{
             // current를 쓰면 calander를 아무곳에서 씀

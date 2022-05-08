@@ -18,8 +18,8 @@ extension View {
 
 struct UserCheckView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @Binding var cigCount: Int?
-    @Binding var cigPrice: Int?
+    @Binding var cigCount: Double?
+    @Binding var cigPrice: Double?
     @State private var touch = false
     
     

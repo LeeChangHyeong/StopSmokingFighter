@@ -32,40 +32,61 @@ struct honeyBeeProgressViewStyle: ProgressViewStyle {
     func makeBody(configuration: Configuration) -> some View {
         return GeometryReader{ geometry in
             VStack(){
-                HStack{
-                    if value < total{
-                        Text("💨")
-                            .font(.system(size: 21))
-                        //                        .scaleEffect(x: -1, y: 1, anchor: .center)
-                            .frame(maxWidth: CGFloat(geometry.size.width / total * CGFloat(value)), alignment: .trailing)
-                            .frame(height: 30)
-                    }else{
-                        Text("🥳")
-                            .font(.system(size: 21))
-                            .frame(maxWidth: CGFloat(geometry.size.width / total * CGFloat(value)), alignment: .trailing)
-                            .frame(height: 30)
-                    }
-                    if value < total{
-                        Spacer()
-                        Text("🚬")
-                            .font(.system(size: 23))
-                            .frame(width: 24, height: 30, alignment: .bottomTrailing)
-                    }
-                }
-                ProgressView(configuration)
-                    .accentColor(.yellow)
-                
-                if (value/total)*100 > 100{
-                    Text("성공 !!")
-
+                ZStack{
                     
-                      
-                }
-                else if (value/total)*100 < 100{
-                    Text("\((value/total)*100)%")
-                       
+                    ProgressView(configuration)
+                        .accentColor(.yellow)
+                        .scaleEffect(x: 1, y: 2, anchor: .center)
+                    
+                    
+                    //HStack{
                         
+                        if value < total{
+                            ZStack{
+                                HStack{
+                                    Spacer()
+                                        Text("🚬")
+                                            .font(.system(size: 30))
+                                            .frame(height: CGFloat(geometry.size.height) - 40).padding(.bottom)
+                                        
+                                    }
+                                HStack{
+                                    
+                                    Text("💨")
+                                        .font(.system(size: 30))
+                                    //                        .scaleEffect(x: -1, y: 1, anchor: .center)
+                                        .frame(maxWidth: CGFloat(geometry.size.width / total * CGFloat(value)+23), alignment: .bottomTrailing)
+                                    Spacer()
+                                }
+                                    //                                .frame(height: 30)
+                                        .frame(height: CGFloat(geometry.size.height - 40))
+                                
+                        }
+                        
+                            
+                            
+                        }else{
+                            Text("🥳")
+                                .font(.system(size: 30))
+                                .frame(maxWidth: CGFloat(geometry.size.width / total * CGFloat(value)), alignment: .bottomTrailing)
+                                .frame(height: CGFloat(geometry.size.height - 40))
+                        }
+                    //}
+                    
                 }
+                
+                //                if (value/total)*100 > 100{
+                //                    Text("성공 !!")
+                //
+                //
+                //                }
+                //                else if (value/total)*100 < 100{
+                //                    Text("\((value/total)*100)%")
+                //                        .frame(maxWidth:.infinity , alignment: .topLeading)
+                //
+                //
+                //                }
+                
                 
             }
         }

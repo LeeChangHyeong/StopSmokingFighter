@@ -37,63 +37,182 @@ struct ReasonView: View {
             ScrollView{
                 VStack{
                     
-                    ProgressView("혈압이 정상으로 돌아옵니다.", value: percent, total: 1200)
-                        .padding()
-                        .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total))
-                    
-                    
-                    
-                    ProgressView("혈액 내 일산화탄소 수준이 정상화됩니다.", value: percent, total: 43200)
-                        .padding()
-                        .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total2))
-                  
-                    
-                    ProgressView("심장 마비의 발병 위험이 감소합니다.", value: percent, total: 86400)
-                        .padding()
-                        .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total3))
-                   
-                    
-                    ProgressView("더 선명한 맛을 느낄 수 있습니다.", value:  percent, total: 172800)
-                        .padding()
-                        .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total4))
-                    
-                    
-                    ProgressView("신체의 니코틴 수치가 감소하기 시작합니다.", value: percent, total: 259200)
-                        .padding()
-                        .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total5))
-                   
-                    
-                    ProgressView("폐 기능이 향상 됩니다.", value: percent, total: 2592000)
-                        .padding()
-                        .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total6))
-                 
-                    
-                    ProgressView("심장마비로 인한 사망 위험이 절반으로 줄어듭니다.", value: percent, total: 31536000 )
-                        .padding()
-                        .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total7))
-                 
-                    
-                    ProgressView("심혈관질환의 위험이 감소합니다.", value: percent, total: 157680000)
-                        .padding()
-                        .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total8))
-                   
-                    
-                    
-                    ProgressView("폐 질환과 암을 포함한 각종 질환의 위험성이 감소합니다.", value: percent, total: 630720000)
-                        .padding()
-                        .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total9))
-                   
-                    if (percent/total9)*100 > 100{
-                        Text("성공 !!")
-                            .padding(.bottom,30)
-                            .opacity(0)
+                    Group{
+                        Group{
+                            Text("혈압이 정상으로 돌아옵니다. (20분)")
+                            if (percent/total)*100 > 100{
+                                Text("성공 !!")
+                                
+                                
+                            }
+                            else if (percent/total)*100 < 100{
+                                Text("\(String(format:"%.03lf",((percent/total)*100)))%")
+                                
+                                
+                            }
+                            
+                            ProgressView( value: percent, total: 1200)
+                                .padding(.horizontal)
+                                .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total))
+                        }
+                        Divider()
+                        Group{
+                            Text("혈액 내 일산화탄소 수준이 정상화됩니다. (12시간)")
+                            if (percent/total2)*100 > 100{
+                                Text("성공 !!")
+                                
+                                
+                            }
+                            else if (percent/total2)*100 < 100{
+                                Text("\(String(format:"%.03lf",((percent/total2)*100)))%")
+                                
+                                
+                            }
+                            ProgressView(value: percent, total: 43200)
+                                .padding(.horizontal)
+                                .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total2))
+                        }
+                        Divider()
+                        Group{
+                            Text("심장 마비의 발병 위험이 감소합니다. (1일)")
+                            if (percent/total3)*100 > 100{
+                                Text("성공 !!")
+                                
+                                
+                            }
+                            else if (percent/total3)*100 < 100{
+                                Text("\(String(format:"%.03lf",((percent/total3)*100)))%")
+                                
+                                
+                            }
+                            
+                            
+                            ProgressView(value: percent, total: 86400)
+                                .padding()
+                                .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total3))
+                        }
+                        Divider()
+                        Group{
+                            Text("더 선명한 맛을 느낄 수 있습니다. (2일)")
+                            if (percent/total4)*100 > 100{
+                                Text("성공 !!")
+                                
+                                
+                            }
+                            else if (percent/total4)*100 < 100{
+                                Text("\(String(format:"%.03lf",((percent/total4)*100)))%")
+                                
+                                
+                            }
+                            ProgressView(value:  percent, total: 172800)
+                                .padding()
+                                .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total4))
+                            
+                        }
+                        Divider()
+                        Group{
+                            Text("신체의 니코틴 수치가 감소하기 시작합니다.(3일)")
+                            if (percent/total5)*100 > 100{
+                                Text("성공 !!")
+                                
+                                
+                            }
+                            else if (percent/total5)*100 < 100{
+                                Text("\(String(format:"%.03lf",((percent/total5)*100)))%")
+                                
+                                
+                            }
+                            ProgressView( value: percent, total: 259200)
+                                .padding()
+                                .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total5))
+                        }
                     }
-                    else if (percent/total9)*100 < 100{
-                        Text("\((percent/total9)*100)%")
-                            .padding(.top,10)
-                            .padding(.bottom,30)
-                            .opacity(0)
+                    Divider()
+                    Group{
+                        Text("폐 기능이 향상 됩니다. (1달)")
+                        if (percent/total6)*100 > 100{
+                            Text("성공 !!")
+                            
+                            
+                        }
+                        else if (percent/total6)*100 < 100{
+                            Text("\(String(format:"%.03lf",((percent/total6)*100)))%")
+                            
+                            
+                        }
+                        
+                        ProgressView( value: percent, total: 2592000)
+                            .padding()
+                            .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total6))
+                        
                     }
+                    Divider()
+                    Group{
+                        Text("심장마비로 인한 사망 위험이 절반으로 줄어듭니다. (1년)")
+                        if (percent/total7)*100 > 100{
+                            Text("성공 !!")
+                            
+                            
+                        }
+                        else if (percent/total7)*100 < 100{
+                            Text("\(String(format:"%.03lf",((percent/total7)*100)))%")
+                            
+                            
+                        }
+                        ProgressView(value: percent, total: 31536000 )
+                            .padding()
+                            .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total7))
+                    }
+                    Divider()
+                    Group{
+                        Text("심혈관질환의 위험이 감소합니다. (5년)")
+                        if (percent/total8)*100 > 100{
+                            Text("성공 !!")
+                            
+                            
+                        }
+                        else if (percent/total8)*100 < 100{
+                            Text("\((percent/total8)*100)%")
+                            
+                            
+                        }
+                        
+                        ProgressView( value: percent, total: 157680000)
+                            .padding()
+                            .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total8))
+                    }
+                    Divider()
+                    Group{
+                        Text("암을 포함한 각종 질환의 위험성이 감소합니다.(20년)")
+                        if (percent/total9)*100 > 100{
+                            
+                            
+                            
+                        }
+                        else if (percent/total9)*100 < 100{
+                            Text("\((percent/total9)*100)%")
+                            
+                            
+                            
+                            
+                        }
+                        ProgressView(value: percent, total: 630720000)
+                            .padding()
+                            .progressViewStyle(honeyBeeProgressViewStyle(value: $percent, total: $total9))
+                        
+                    }
+                    
+                    //                    if (percent/total9)*100 > 100{
+                    //                        Text("성공 !!")
+                    //                            .padding(.bottom,30)
+                    //                            .opacity(0)
+                    //                    }
+                    //                    else if (percent/total9)*100 < 100{
+                    //                        Text("\((percent/total9)*100)%")
+                    //                            .padding(.top,10)
+                    //                            .padding(.bottom,30)
+                    //                            .opacity(0)
+                    //                    }
                     
                     
                     

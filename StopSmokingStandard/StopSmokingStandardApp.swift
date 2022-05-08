@@ -12,6 +12,9 @@ struct StopSmokingStandardApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            
         }
     }
 }
+
+

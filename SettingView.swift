@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SettingView: View {
     @ObservedObject var timerManager: TimerManager
-    @Binding var cigCount: Int?
-    @Binding var cigPrice: Int?
+    @Binding var cigCount: Double?
+    @Binding var cigPrice: Double?
     var body: some View {
         NavigationView{
             List{

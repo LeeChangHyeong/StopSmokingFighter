@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct TabBar: View {
-//    init() {
-//    UITabBar.appearance().backgroundColor = UIColor.black
-//    }
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.yellow
+  }
     
     
     
     @StateObject var timerManager = TimerManager()
     
-    @AppStorage("cigCount") var cigCount: Int?
-    @AppStorage("cigPrice") var cigPrice: Int?
+    @AppStorage("cigCount") var cigCount: Double?
+    @AppStorage("cigPrice") var cigPrice: Double?
     @AppStorage("LOSE") var lose: Int = 0
     @AppStorage("Touch") var touch: Bool = false
     var body: some View {
@@ -26,12 +26,14 @@ struct TabBar: View {
                 .tabItem {
                     Image(systemName: "cross")
                     Text("홈")
+                    
                 }
             
             SettingView(timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice)
                 .tabItem {
                     Image(systemName: "gearshape")
                     Text("설정/정보")
+                        
                 }
         }
            
