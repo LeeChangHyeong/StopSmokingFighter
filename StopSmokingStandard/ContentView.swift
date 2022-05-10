@@ -12,12 +12,13 @@ struct ContentView: View {
     @AppStorage("_isFirstLaunching") var isFirstLaunching: Bool = true
     
     var body: some View {
-        
-        
         TabBar()
-            .fullScreenCover(isPresented: $isFirstLaunching) {
-                            OnboardingTabView(isFirstLaunching: $isFirstLaunching)
-                        }
+        
+//
+//        TabBar()
+//            .fullScreenCover(isPresented: $isFirstLaunching) {
+//                            OnboardingTabView(isFirstLaunching: $isFirstLaunching)
+//                        }
         
     }
 }

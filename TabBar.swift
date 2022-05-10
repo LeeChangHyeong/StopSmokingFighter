@@ -20,6 +20,12 @@ struct TabBar: View {
     @AppStorage("cigPrice") var cigPrice: Double?
     @AppStorage("LOSE") var lose: Int = 0
     @AppStorage("Touch") var touch: Bool = false
+    
+    
+    
+    
+    
+    
     var body: some View {
         TabView {
             TimerView(timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice, lose: $lose, touch: $touch)

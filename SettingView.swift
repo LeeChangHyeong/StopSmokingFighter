@@ -24,7 +24,9 @@ struct SettingView: View {
                 }.foregroundColor(.black)
                 
                 Section(header: Text("금연 도우미"), footer: Text("")){
-                    Label("금연 꿀팁",systemImage: "lightbulb")
+                    NavigationLink(destination: TipPage()){
+                        Label("금연 꿀팁",systemImage: "lightbulb")
+                    }
                     NavigationLink(destination: ReasonView(timerManager: timerManager)){
                         Label("금연 중 내 몸 변화",systemImage: "heart")
                     }
