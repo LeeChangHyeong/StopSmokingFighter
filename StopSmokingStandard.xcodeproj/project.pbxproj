@@ -24,6 +24,8 @@
 		32776FEA2823D35F00927C5B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FE92823D35F00927C5B /* TimerView.swift */; };
 		32776FEC2823D4E400927C5B /* UserCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FEB2823D4E300927C5B /* UserCheckView.swift */; };
 		32CDFE18282A935500DD7033 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CDFE17282A935500DD7033 /* Font.swift */; };
+		32CDFE1B282BD66400DD7033 /* FontBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CDFE1A282BD66400DD7033 /* FontBold.swift */; };
+		32CDFE1D282BD6F200DD7033 /* Fail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CDFE1C282BD6F200DD7033 /* Fail.swift */; };
 		32F41A48282627040030E0BF /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F41A47282627040030E0BF /* TabBar.swift */; };
 		32F41A4A282633ED0030E0BF /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F41A49282633ED0030E0BF /* SettingView.swift */; };
 		32F41A4C28265B250030E0BF /* ReasonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F41A4B28265B250030E0BF /* ReasonView.swift */; };
@@ -69,6 +71,8 @@
 		32776FEB2823D4E300927C5B /* UserCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCheckView.swift; sourceTree = "<group>"; };
 		32776FEF282436A200927C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		32CDFE17282A935500DD7033 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		32CDFE1A282BD66400DD7033 /* FontBold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontBold.swift; sourceTree = "<group>"; };
+		32CDFE1C282BD6F200DD7033 /* Fail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fail.swift; sourceTree = "<group>"; };
 		32F41A47282627040030E0BF /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		32F41A49282633ED0030E0BF /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		32F41A4B28265B250030E0BF /* ReasonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonView.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				32776FE92823D35F00927C5B /* TimerView.swift */,
 				32F41A49282633ED0030E0BF /* SettingView.swift */,
 				32CDFE17282A935500DD7033 /* Font.swift */,
+				32CDFE1C282BD6F200DD7033 /* Fail.swift */,
+				32CDFE1A282BD66400DD7033 /* FontBold.swift */,
 				322AF8C72827DB4900632AB5 /* RandomImage.swift */,
 				32F41A4B28265B250030E0BF /* ReasonView.swift */,
 				322AF8C02827C34400632AB5 /* TipPage.swift */,
@@ -310,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				322AF8BA2827ADC800632AB5 /* OnboardingPageView.swift in Sources */,
+				32CDFE1D282BD6F200DD7033 /* Fail.swift in Sources */,
 				32776FE82823D10A00927C5B /* TimerManager.swift in Sources */,
 				32776FEC2823D4E400927C5B /* UserCheckView.swift in Sources */,
 				32776FC02823CCD700927C5B /* ContentView.swift in Sources */,
@@ -318,6 +325,7 @@
 				32F41A4A282633ED0030E0BF /* SettingView.swift in Sources */,
 				322AF8C42827C73A00632AB5 /* LaunchPageView.swift in Sources */,
 				32F41A4E282661190030E0BF /* fightingProgressViewStyle.swift in Sources */,
+				32CDFE1B282BD66400DD7033 /* FontBold.swift in Sources */,
 				32776FBE2823CCD700927C5B /* StopSmokingStandardApp.swift in Sources */,
 				322AF8BE2827ADFB00632AB5 /* OnboardingTabView.swift in Sources */,
 				32F41A48282627040030E0BF /* TabBar.swift in Sources */,

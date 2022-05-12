@@ -46,14 +46,14 @@ struct LaunchPageView: View {
                 
             }
             .onAppear {
-                withAnimation(.spring(response:2)) {
+                withAnimation(.spring(response:1)) {
                     textAnimation = true
                 }
                 
-                withAnimation(.spring(response: 2).delay(1)){
+                withAnimation(.spring(response: 1).delay(0.2)){
                     textAnimation2 = true
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     self.isActive = true
                 }
             }

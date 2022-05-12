@@ -16,7 +16,7 @@ struct honeyBeeProgressViewStyle: ProgressViewStyle {
                 ZStack{
                     
                     ProgressView(configuration)
-                        .accentColor(.yellow)
+                        .accentColor(Color.buttonColor)
                         .scaleEffect(x: 1, y: 2, anchor: .center)
                     
                         

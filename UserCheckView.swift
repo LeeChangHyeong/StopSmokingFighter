@@ -67,7 +67,7 @@ struct UserCheckView: View {
         }
         .onTapGesture {
             hideKeyboard()
-        }
+        }.navigationBarTitle(Text("흡연량 설정"), displayMode: .inline)
         
         
         
