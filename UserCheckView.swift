@@ -29,11 +29,12 @@ struct UserCheckView: View {
             Text("하루 흡연 개비")
                 .frame(maxWidth:.infinity, alignment: .leading)
                 .padding(.horizontal)
+               
             
             TextField("하루 흡연 개비", value: $cigCount, format:.number)
                 .keyboardType(.numberPad)
                 .padding()
-                .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.blue, lineWidth: 1))
+                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.blue, lineWidth: 1))
                 .frame(maxWidth:.infinity, alignment: .leading)
                 .padding(.horizontal)
                 .padding(.bottom, 10)
@@ -48,7 +49,7 @@ struct UserCheckView: View {
             TextField("피우는 담배 가격(원)", value: $cigPrice, format:.number)
                 .keyboardType(.numberPad)
                 .padding()
-                .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.blue, lineWidth: 1))
+                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.blue, lineWidth: 1))
                 .frame(maxWidth:.infinity, alignment: .leading)
                 .padding(.horizontal)
             

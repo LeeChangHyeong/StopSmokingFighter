@@ -66,13 +66,19 @@ struct ReasonView: View {
                         Divider()
                         Group{
                             Text("혈액 내 일산화탄소 수준이 정상화됩니다. (12시간)")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 20)
                             if (percent/total2)*100 > 100{
                                 Text("성공 !!")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.leading, 20)
                                 
                                 
                             }
                             else if (percent/total2)*100 < 100{
                                 Text("\(String(format:"%.03lf",((percent/total2)*100)))%")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.leading, 20)
                                 
                                 
                             }
@@ -83,13 +89,19 @@ struct ReasonView: View {
                         Divider()
                         Group{
                             Text("심장 마비의 발병 위험이 감소합니다. (1일)")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 20)
                             if (percent/total3)*100 > 100{
                                 Text("성공 !!")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.leading, 20)
                                 
                                 
                             }
                             else if (percent/total3)*100 < 100{
                                 Text("\(String(format:"%.03lf",((percent/total3)*100)))%")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.leading, 20)
                                 
                                 
                             }
@@ -102,13 +114,20 @@ struct ReasonView: View {
                         Divider()
                         Group{
                             Text("더 선명한 맛을 느낄 수 있습니다. (2일)")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 20)
                             if (percent/total4)*100 > 100{
                                 Text("성공 !!")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.leading, 20)
                                 
                                 
                             }
                             else if (percent/total4)*100 < 100{
                                 Text("\(String(format:"%.03lf",((percent/total4)*100)))%")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.leading, 20)
+                                
                                 
                                 
                             }
@@ -120,13 +139,19 @@ struct ReasonView: View {
                         Divider()
                         Group{
                             Text("신체의 니코틴 수치가 감소하기 시작합니다.(3일)")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 20)
                             if (percent/total5)*100 > 100{
                                 Text("성공 !!")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.leading, 20)
                                 
                                 
                             }
                             else if (percent/total5)*100 < 100{
                                 Text("\(String(format:"%.03lf",((percent/total5)*100)))%")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.leading, 20)
                                 
                                 
                             }
@@ -138,13 +163,19 @@ struct ReasonView: View {
                     Divider()
                     Group{
                         Text("폐 기능이 향상 됩니다. (1달)")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.leading, 20)
                         if (percent/total6)*100 > 100{
                             Text("성공 !!")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 20)
                             
                             
                         }
                         else if (percent/total6)*100 < 100{
                             Text("\(String(format:"%.03lf",((percent/total6)*100)))%")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 20)
                             
                             
                         }
@@ -157,13 +188,19 @@ struct ReasonView: View {
                     Divider()
                     Group{
                         Text("심장마비로 인한 사망 위험이 절반으로 줄어듭니다. (1년)")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.leading, 20)
                         if (percent/total7)*100 > 100{
                             Text("성공 !!")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 20)
                             
                             
                         }
                         else if (percent/total7)*100 < 100{
                             Text("\(String(format:"%.03lf",((percent/total7)*100)))%")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 20)
                             
                             
                         }
@@ -174,13 +211,19 @@ struct ReasonView: View {
                     Divider()
                     Group{
                         Text("심혈관질환의 위험이 감소합니다. (5년)")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.leading, 20)
                         if (percent/total8)*100 > 100{
                             Text("성공 !!")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 20)
                             
                             
                         }
                         else if (percent/total8)*100 < 100{
                             Text("\((percent/total8)*100)%")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 20)
                             
                             
                         }
@@ -192,13 +235,20 @@ struct ReasonView: View {
                     Divider()
                     Group{
                         Text("암을 포함한 각종 질환의 위험성이 감소합니다.(20년)")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.leading, 20)
                         if (percent/total9)*100 > 100{
+                            Text("성공 !!")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 20)
                             
                             
                             
                         }
                         else if (percent/total9)*100 < 100{
                             Text("\((percent/total9)*100)%")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 20)
                             
                             
                             

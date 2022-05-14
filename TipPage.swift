@@ -11,8 +11,85 @@ struct TipPage: View {
     var body: some View {
         
         VStack{
-        Text("1. 금연 결심했다고 즉시 주위 사람들에게 알리기\n2. 흡연 습관을 대체 할 수 있는 재밌는 취미 찾기\n3. 담배는 일시에 끊기 !! 줄인다는 말 금지 !\n4. 물 자주 마시기(금단증상 완화, 니코틴 배설 촉진 효과)\n5. 흡연 욕구가 생길 때 마다 금연을 다짐 했던 날 돌이켜보기(금연이 생각하기^_^)\n6. 내가 흡연한 직후 만나는 상대방 입장에서 생각해보기\n7. 금연 성공 후 같이 기뻐해 줄 사람들 생각하기\n8. 담배가 있는 자리는 최대한 피하기")
-        }.navigationBarTitle(Text("금연 꿀팁"), displayMode: .inline)
+            HStack{
+                Image(systemName: "checkmark.square.fill")
+                    .foregroundColor(Color.intColor)
+                    .padding(.leading,10)
+                Text("금연 결심했다고 즉시 주위 사람들에게 알려보아요")
+                    .scaledFont(size: 15)
+                
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.vertical, 10)
+            
+            HStack{
+                Image(systemName: "checkmark.square.fill")
+                    .foregroundColor(Color.intColor)
+                    .padding(.leading,10)
+                Text("흡연 습관을 대체 할 수 있는 재미있는 취미를 찾아봐요")
+                    .scaledFont(size: 15)
+            }.frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical, 10)
+            
+            HStack{
+                Image(systemName: "checkmark.square.fill")
+                    .foregroundColor(Color.intColor)
+                    .padding(.leading,10)
+                Text("담배를 줄인다는 말 대신 지금부터 실천해요")
+                    .scaledFont(size: 15)
+            }.frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical, 10)
+            
+            HStack{
+                Image(systemName: "checkmark.square.fill")
+                    .foregroundColor(Color.intColor)
+                    .padding(.leading,10)
+                Text("물을 자주 마셔요 (금단증상 완화, 니코틴 배설 촉진 효과)")
+                    .scaledFont(size: 15)
+            }.frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical, 10)
+            
+            HStack{
+                Image(systemName: "checkmark.square.fill")
+                    .foregroundColor(Color.intColor)
+                    .padding(.leading,10)
+                Text("흡연 욕구가 생길 때 마다 금연을 다짐 했던 날을 생각해요")
+                    .scaledFont(size: 15)
+            }.frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical, 10)
+            
+            HStack{
+                Image(systemName: "checkmark.square.fill")
+                    .foregroundColor(Color.intColor)
+                    .padding(.leading,10)
+                Text("내가 흡연한 직후 만나는 상대방 입장에서 생각해 보아요")
+                    .scaledFont(size: 15)
+            }.frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical, 10)
+            
+            HStack{
+                Image(systemName: "checkmark.square.fill")
+                    .foregroundColor(Color.intColor)
+                    .padding(.leading,10)
+                Text("금연 성공 후 같이 기뻐해 줄 사람들을 생각해 보아요")
+                    .scaledFont(size: 15)
+            }.frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical, 10)
+            
+            HStack{
+                Image(systemName: "checkmark.square.fill")
+                    .foregroundColor(Color.intColor)
+                    .padding(.leading,10)
+                Text("담배가 있는 자리는 최대한 피해요")
+                    .scaledFont(size: 15)
+            }.frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical, 10)
+            
+        }
+
+        .navigationBarTitle(Text("금연 꿀팁"), displayMode: .inline)
+            
+          
     }
 }
 
