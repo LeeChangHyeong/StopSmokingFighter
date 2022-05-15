@@ -9,14 +9,6 @@ import SwiftUI
 
 
 struct TabBar: View {
-    init() {
-        UITabBar.appearance().barTintColor = .systemBackground
-        
-        UITabBar.appearance().unselectedItemTintColor = UIColor(named: "gray")
-        
-        UITabBar.appearance().backgroundColor = UIColor(named: "buttonColor")
-        
-    }
     
     
     
@@ -46,11 +38,14 @@ struct TabBar: View {
         }.accentColor(Color.intColor)
             .onAppear{
                 let appearance = UITabBarAppearance()
-                                appearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)
-                                appearance.backgroundColor = UIColor(Color("buttonColor"))
-                                
-                                UITabBar.appearance().standardAppearance = appearance
-                                UITabBar.appearance().scrollEdgeAppearance = appearance
+                
+                appearance.backgroundColor = UIColor(Color("buttonColor"))
+                
+                UITabBar.appearance().standardAppearance = appearance
+                UITabBar.appearance().scrollEdgeAppearance = appearance
+                UITabBar.appearance().unselectedItemTintColor = UIColor(named: "gray")
+                // 네비게이션 색 변경
+                UINavigationBar.appearance().tintColor = .black
                 
                 
             }

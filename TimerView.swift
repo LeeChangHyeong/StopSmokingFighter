@@ -17,7 +17,7 @@ extension Color {
 
 struct TimerView: View {
     // 변경값을 관찰하기 위해 ObservaleObject 추가
-   
+    
     
     
     @ObservedObject var timerManager: TimerManager
@@ -31,20 +31,13 @@ struct TimerView: View {
     @Binding var cigPrice: Double?
     @Binding var lose: Int
     
-    
-    //    var imageNames: [String] = ["hi","young","soccer","soccer2"]
-    /// x 개  1개에 225원 (x X 225) / 86400
-    ///  ((cigPrice / 20) * cigCount) / 86400 = 1s 돈
-    
-    //    var imageName: String { if (timerManager.secondsElapsed) % 2 == 1 { return "bandage.fill" } else { return "bed.double.circle" } }
-    
     @AppStorage("savedDate") var date: Date = Date()
     
     
     @Binding var touch: Bool
-   
+    
     @State var showingAlert2 = false
-   
+    
     
     static var imageName = ImagePick()
     
@@ -65,8 +58,8 @@ struct TimerView: View {
                 .scaledToFit()
                 .frame(width: 300, height: 300)
                 .background(.gray)
-                
-                
+            
+            
             
             
             if touch == false {
@@ -86,11 +79,11 @@ struct TimerView: View {
                         .scaledFontBold(size: 18)
                         .lineLimit(1)
                     
-//                        .foregroundColor(.black)
-//                        .padding(.vertical, 20)
-//                        .padding(.horizontal, 90)
-//                        .background(.yellow)
-//                        .cornerRadius(20)
+                    //                        .foregroundColor(.black)
+                    //                        .padding(.vertical, 20)
+                    //                        .padding(.horizontal, 90)
+                    //                        .background(.yellow)
+                    //                        .cornerRadius(20)
                 }
                 .alert("금연 할 수 있습니다 !", isPresented: $showingAlert2){
                     // 주요행동
@@ -127,38 +120,38 @@ struct TimerView: View {
                 
                 
             }
-//                        Button{
-//                            self.showingAlert.toggle()
-//                        } label: {
-//                            Text("포기하기..")
-//                                .foregroundColor(.white)
-//                                .frame(maxWidth:.infinity)
-//                                .padding(.vertical, 20)
-//                                .padding(.horizontal, 90)
-//                                .background(Color.buttonColor)
-//                                .cornerRadius(10)
-//                                .padding(.horizontal, 30)
-//                                .padding(.top, 20)
-//                                .padding(.bottom, 10)
-//                                .scaledFontBold(size: 18)
-//                        }
-//                        .alert("다시 한 번 생각해보세요..", isPresented: $showingAlert) {
-//                            Button(role: .destructive) {
-//                                self.timerManager.stop()
-//                                touch = false
-//                                lose += 1
-//            
-//                            } label: {
-//                                Text("금연이 죽이기")
-//                            }
-//            
-//                            Button(role: .cancel) {
-//            
-//                            } label: {
-//                                Text("금연이 살리기")
-//                            }
-//                        }
-//            
+            //                        Button{
+            //                            self.showingAlert.toggle()
+            //                        } label: {
+            //                            Text("포기하기..")
+            //                                .foregroundColor(.white)
+            //                                .frame(maxWidth:.infinity)
+            //                                .padding(.vertical, 20)
+            //                                .padding(.horizontal, 90)
+            //                                .background(Color.buttonColor)
+            //                                .cornerRadius(10)
+            //                                .padding(.horizontal, 30)
+            //                                .padding(.top, 20)
+            //                                .padding(.bottom, 10)
+            //                                .scaledFontBold(size: 18)
+            //                        }
+            //                        .alert("다시 한 번 생각해보세요..", isPresented: $showingAlert) {
+            //                            Button(role: .destructive) {
+            //                                self.timerManager.stop()
+            //                                touch = false
+            //                                lose += 1
+            //
+            //                            } label: {
+            //                                Text("금연이 죽이기")
+            //                            }
+            //
+            //                            Button(role: .cancel) {
+            //
+            //                            } label: {
+            //                                Text("금연이 살리기")
+            //                            }
+            //                        }
+            //
             
             
             
@@ -177,14 +170,14 @@ struct TimerView: View {
                         Text("절약한 돈")
                             .foregroundColor(.white)
                             .padding(.horizontal, 27)
-//                            .background(.black)
+                        //                            .background(.black)
                             .scaledFontBold(size: 15)
                     }
                     .foregroundColor(.white)
                     .padding(.vertical, 20)
                     .background(Color.infoBackColor)
                     .cornerRadius(20)
-                
+                    
                     
                     VStack{
                         Image(systemName: "lungs.fill")
@@ -195,23 +188,23 @@ struct TimerView: View {
                             .foregroundColor(Color.intColor)
                             .padding(.bottom, 5)
                             .scaledFont(size: 16)
-                            
+                        
                         
                         Text("아낀 담배")
                             .foregroundColor(.white)
                             .padding(.horizontal, 27)
-//                            .background(.black)
+                        //                            .background(.black)
                             .scaledFontBold(size: 15)
                     }
                     .foregroundColor(.white)
                     .padding(.vertical, 20)
                     .background(Color.infoBackColor)
                     .cornerRadius(20)
-             
+                    
                     
                     VStack{
                         Image(systemName: "heart.fill")
-                           
+                        
                             .padding(.bottom, 8)
                             .font(.title2)
                         
@@ -220,11 +213,11 @@ struct TimerView: View {
                             .padding(.bottom, 5)
                             .scaledFont(size: 16)
                         
-                            
+                        
                         Text("수명 연장")
                             .foregroundColor(.white)
                             .padding(.horizontal, 27)
-//                            .background(.black)
+                        //                            .background(.black)
                             .scaledFontBold(size: 15)
                     }
                     .foregroundColor(.white)
@@ -285,7 +278,7 @@ extension Date: RawRepresentable {
 
 
 class ImagePick{
-    var imageNames: [String] = ["hi","young","soccer","soccer2"]
+    var imageNames: [String] = ["hi","young","soccer","soccer2","hey"]
     var isEntered : Bool = false
     static var imageName : String = ""
     

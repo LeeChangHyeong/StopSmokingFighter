@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingView: View {
+    @Environment(\.presentationMode) var presentationMode
     @ObservedObject var timerManager: TimerManager
     @Binding var cigCount: Double?
     @Binding var cigPrice: Double?
@@ -26,7 +27,7 @@ struct SettingView: View {
                                     Button{
                         self.showingAlert.toggle()
                     } label: {
-                        Text("포기하기..")
+                        Text("포기하기")
                             .foregroundColor(.white)
                             .frame(maxWidth:.infinity)
                             .padding(.vertical, 20)
@@ -38,7 +39,7 @@ struct SettingView: View {
                             .padding(.bottom, 10)
                             .scaledFontBold(size: 18)
                     }
-                        .alert("다시 한 번 생각해보세요..", isPresented: $showingAlert) {
+                        .alert("다시 한 번 생각해보세요", isPresented: $showingAlert) {
                             Button(role: .destructive) {
                                 self.timerManager.stop()
                                 touch = false
@@ -75,8 +76,9 @@ struct SettingView: View {
                 }.foregroundColor(.black)
             }
         }
+        
+        
     }
-    
+   
+
 }
-
-

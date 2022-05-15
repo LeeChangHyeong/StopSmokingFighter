@@ -260,18 +260,6 @@ struct ReasonView: View {
                         
                     }
                     
-                    //                    if (percent/total9)*100 > 100{
-                    //                        Text("성공 !!")
-                    //                            .padding(.bottom,30)
-                    //                            .opacity(0)
-                    //                    }
-                    //                    else if (percent/total9)*100 < 100{
-                    //                        Text("\((percent/total9)*100)%")
-                    //                            .padding(.top,10)
-                    //                            .padding(.bottom,30)
-                    //                            .opacity(0)
-                    //                    }
-                    
                     
                     
                 }
@@ -288,6 +276,7 @@ struct ReasonView: View {
                     .frame(minHeight: geometry.size.height + 400)
                     .frame(width: geometry.size.width)
                 
+                
             }                
                 
             
@@ -299,4 +288,5 @@ struct ReasonView: View {
         }
     }
 }
+    
 

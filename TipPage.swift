@@ -11,6 +11,11 @@ struct TipPage: View {
     var body: some View {
         
         VStack{
+            Text("금연 꿀팁을 함께 실천해봐요!")
+                .padding(.vertical, 17)
+                .scaledFontBold(size: 23)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 10)
             HStack{
                 Image(systemName: "checkmark.square.fill")
                     .foregroundColor(Color.intColor)
@@ -20,7 +25,7 @@ struct TipPage: View {
                 
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.vertical, 10)
+            .padding(.vertical, 7)
             
             HStack{
                 Image(systemName: "checkmark.square.fill")
@@ -29,7 +34,7 @@ struct TipPage: View {
                 Text("흡연 습관을 대체 할 수 있는 재미있는 취미를 찾아봐요")
                     .scaledFont(size: 15)
             }.frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical, 10)
+                .padding(.vertical, 7)
             
             HStack{
                 Image(systemName: "checkmark.square.fill")
@@ -38,7 +43,7 @@ struct TipPage: View {
                 Text("담배를 줄인다는 말 대신 지금부터 실천해요")
                     .scaledFont(size: 15)
             }.frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical, 10)
+                .padding(.vertical, 7)
             
             HStack{
                 Image(systemName: "checkmark.square.fill")
@@ -47,7 +52,7 @@ struct TipPage: View {
                 Text("물을 자주 마셔요 (금단증상 완화, 니코틴 배설 촉진 효과)")
                     .scaledFont(size: 15)
             }.frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical, 10)
+                .padding(.vertical, 7)
             
             HStack{
                 Image(systemName: "checkmark.square.fill")
@@ -56,7 +61,7 @@ struct TipPage: View {
                 Text("흡연 욕구가 생길 때 마다 금연을 다짐 했던 날을 생각해요")
                     .scaledFont(size: 15)
             }.frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical, 10)
+                .padding(.vertical, 7)
             
             HStack{
                 Image(systemName: "checkmark.square.fill")
@@ -65,7 +70,7 @@ struct TipPage: View {
                 Text("내가 흡연한 직후 만나는 상대방 입장에서 생각해 보아요")
                     .scaledFont(size: 15)
             }.frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical, 10)
+                .padding(.vertical, 7)
             
             HStack{
                 Image(systemName: "checkmark.square.fill")
@@ -74,7 +79,7 @@ struct TipPage: View {
                 Text("금연 성공 후 같이 기뻐해 줄 사람들을 생각해 보아요")
                     .scaledFont(size: 15)
             }.frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical, 10)
+                .padding(.vertical, 7)
             
             HStack{
                 Image(systemName: "checkmark.square.fill")
@@ -83,9 +88,11 @@ struct TipPage: View {
                 Text("담배가 있는 자리는 최대한 피해요")
                     .scaledFont(size: 15)
             }.frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical, 10)
+                .padding(.vertical, 7)
             
         }
+        .frame(maxHeight:.infinity)
+        .padding(.bottom, 150)
 
         .navigationBarTitle(Text("금연 꿀팁"), displayMode: .inline)
             
