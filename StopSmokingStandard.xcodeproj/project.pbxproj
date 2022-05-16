@@ -12,7 +12,6 @@
 		322AF8BE2827ADFB00632AB5 /* OnboardingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AF8BD2827ADFB00632AB5 /* OnboardingTabView.swift */; };
 		322AF8C12827C34400632AB5 /* TipPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AF8C02827C34400632AB5 /* TipPage.swift */; };
 		322AF8C42827C73A00632AB5 /* LaunchPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AF8C32827C73A00632AB5 /* LaunchPageView.swift */; };
-		322AF8C82827DB4900632AB5 /* RandomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AF8C72827DB4900632AB5 /* RandomImage.swift */; };
 		32776FBE2823CCD700927C5B /* StopSmokingStandardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FBD2823CCD700927C5B /* StopSmokingStandardApp.swift */; };
 		32776FC02823CCD700927C5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FBF2823CCD700927C5B /* ContentView.swift */; };
 		32776FC22823CCD700927C5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32776FC12823CCD700927C5B /* Assets.xcassets */; };
@@ -55,7 +54,6 @@
 		322AF8BD2827ADFB00632AB5 /* OnboardingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabView.swift; sourceTree = "<group>"; };
 		322AF8C02827C34400632AB5 /* TipPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipPage.swift; sourceTree = "<group>"; };
 		322AF8C32827C73A00632AB5 /* LaunchPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPageView.swift; sourceTree = "<group>"; };
-		322AF8C72827DB4900632AB5 /* RandomImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImage.swift; sourceTree = "<group>"; };
 		32776FBA2823CCD700927C5B /* StopSmokingStandard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopSmokingStandard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32776FBD2823CCD700927C5B /* StopSmokingStandardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopSmokingStandardApp.swift; sourceTree = "<group>"; };
 		32776FBF2823CCD700927C5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 				32CDFE17282A935500DD7033 /* Font.swift */,
 				32CDFE1C282BD6F200DD7033 /* Fail.swift */,
 				32CDFE1A282BD66400DD7033 /* FontBold.swift */,
-				322AF8C72827DB4900632AB5 /* RandomImage.swift */,
 				32F41A4B28265B250030E0BF /* ReasonView.swift */,
 				322AF8C02827C34400632AB5 /* TipPage.swift */,
 				32F41A4D282661190030E0BF /* fightingProgressViewStyle.swift */,
@@ -320,7 +317,6 @@
 				32776FE82823D10A00927C5B /* TimerManager.swift in Sources */,
 				32776FEC2823D4E400927C5B /* UserCheckView.swift in Sources */,
 				32776FC02823CCD700927C5B /* ContentView.swift in Sources */,
-				322AF8C82827DB4900632AB5 /* RandomImage.swift in Sources */,
 				322AF8C12827C34400632AB5 /* TipPage.swift in Sources */,
 				32F41A4A282633ED0030E0BF /* SettingView.swift in Sources */,
 				322AF8C42827C73A00632AB5 /* LaunchPageView.swift in Sources */,
