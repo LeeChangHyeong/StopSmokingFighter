@@ -14,7 +14,7 @@ struct OnboardingPageView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: imageName)
+            Image(imageName)
                 .font(.system(size: 100))
                 .padding()
             Text(title)
@@ -31,9 +31,9 @@ struct OnboardingPageView: View {
 struct OnboardingPageView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingPageView(
-            imageName: "note.text.badge.plus",
-            title: "쓰기 탭",
-            subtitle: "이 앱은 개인 메모장으로 쓸 수 있어요"
+            imageName: "p1",
+            title: "금연이",
+            subtitle: "금연이는 여러분의 폐 속에 자리 잡고 있는 금연이를 물리쳐 줄 친구입니다"
         )
     }
 }

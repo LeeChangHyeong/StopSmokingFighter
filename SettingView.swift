@@ -29,37 +29,6 @@ struct SettingView: View {
                     NavigationLink(destination:Fail(timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice, showingAlert: $showingAlert, touch: $touch, lose: $lose)
                                    
                                     
-//                                    Button{
-//                        self.showingAlert.toggle()
-//                    } label: {
-//                        Text("포기하기")
-//                            .foregroundColor(.white)
-//                            .frame(maxWidth:.infinity)
-//                            .padding(.vertical, 20)
-//                            .padding(.horizontal, 90)
-//                            .background(Color.buttonColor)
-//                            .cornerRadius(10)
-//                            .padding(.horizontal, 30)
-//                            .padding(.top, 20)
-//                            .padding(.bottom, 10)
-//                            .scaledFontBold(size: 18)
-//                    }
-//                        .alert("다시 한 번 생각해보세요", isPresented: $showingAlert) {
-//                            Button(role: .destructive) {
-//                                self.timerManager.stop()
-//                                touch = false
-//                                lose += 1
-//
-//                            } label: {
-//                                Text("금연이 죽이기")
-//                            }
-//
-//                            Button(role: .cancel) {
-//
-//                            } label: {
-//                                Text("금연이 살리기")
-//                            }
-//                        }
                     )
                                    {
                             Label("금연 포기하기",systemImage: "xmark.circle.fill")
@@ -67,7 +36,8 @@ struct SettingView: View {
                         }
                     
                     
-                    Label("알림 설정",systemImage: "bell")
+                   
+                    
                 }.foregroundColor(.black)
                 
                 

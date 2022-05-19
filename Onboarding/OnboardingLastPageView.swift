@@ -16,7 +16,7 @@ struct OnboardingLastPageView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: imageName)
+            Image(imageName)
                 .font(.system(size: 100))
                 .padding()
             Text(title)
