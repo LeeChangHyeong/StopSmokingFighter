@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ReasonView: View {
+    @Environment(\.dismiss) private var dismiss
     
     @ObservedObject var timerManager: TimerManager
     @State var percent: Double = 0
@@ -44,6 +45,7 @@ struct ReasonView: View {
                             Text("혈압이 정상으로 돌아옵니다. (20분)")
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.leading, 20)
+                                .padding(.top, 20)
                             if (percent/total)*100 > 100{
                                 Text("성공 !!")
                                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -272,7 +274,10 @@ struct ReasonView: View {
                     percent = 0
                     percent += Double(timerManager.secondsElapsed)
                     //            }.navigationBarTitleDisplayMode(.inline)
-                }.navigationBarTitle(Text("금연 중 내 몸 변화"), displayMode: .inline)
+                }
+                .onDisappear(perform: {
+                    dismiss()
+                }).navigationBarTitle(Text("금연 중 내 몸 변화"), displayMode: .inline)
                     .frame(minHeight: geometry.size.height + 400)
                     .frame(width: geometry.size.width)
                 

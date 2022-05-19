@@ -22,6 +22,7 @@
 		32776FE82823D10A00927C5B /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FE72823D10A00927C5B /* TimerManager.swift */; };
 		32776FEA2823D35F00927C5B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FE92823D35F00927C5B /* TimerView.swift */; };
 		32776FEC2823D4E400927C5B /* UserCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FEB2823D4E300927C5B /* UserCheckView.swift */; };
+		3279315D28368E53008918EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3279315F28368E53008918EC /* InfoPlist.strings */; };
 		3286D1642834FA27006D4A75 /* galleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3286D1632834FA27006D4A75 /* galleryView.swift */; };
 		32CDFE18282A935500DD7033 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CDFE17282A935500DD7033 /* Font.swift */; };
 		32CDFE1B282BD66400DD7033 /* FontBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CDFE1A282BD66400DD7033 /* FontBold.swift */; };
@@ -69,6 +70,8 @@
 		32776FE92823D35F00927C5B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		32776FEB2823D4E300927C5B /* UserCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCheckView.swift; sourceTree = "<group>"; };
 		32776FEF282436A200927C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3279315E28368E53008918EC /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3279316028368E54008918EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3286D1632834FA27006D4A75 /* galleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galleryView.swift; sourceTree = "<group>"; };
 		32CDFE17282A935500DD7033 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		32CDFE1A282BD66400DD7033 /* FontBold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontBold.swift; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 		32776FB12823CCD600927C5B = {
 			isa = PBXGroup;
 			children = (
+				3279315F28368E53008918EC /* InfoPlist.strings */,
 				32776FE72823D10A00927C5B /* TimerManager.swift */,
 				322AF8C32827C73A00632AB5 /* LaunchPageView.swift */,
 				32F41A47282627040030E0BF /* TabBar.swift */,
@@ -271,6 +275,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 32776FB12823CCD600927C5B;
 			productRefGroup = 32776FBB2823CCD700927C5B /* Products */;
@@ -290,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32776FC52823CCD700927C5B /* Preview Assets.xcassets in Resources */,
+				3279315D28368E53008918EC /* InfoPlist.strings in Resources */,
 				32776FC22823CCD700927C5B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +373,18 @@
 			targetProxy = 32776FD52823CCD800927C5B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3279315F28368E53008918EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3279315E28368E53008918EC /* ko */,
+				3279316028368E54008918EC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		32776FDC2823CCD800927C5B /* Debug */ = {

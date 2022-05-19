@@ -83,7 +83,7 @@ struct TimerView: View {
                 Button {
                     self.showingAlert2.toggle()
                 } label: {
-                    Text("흡연이 무찌르기 !")
+                    Text("금연 시작하기 !")
                         .foregroundColor(.white)
                         .frame(maxWidth:.infinity)
                         .padding(.vertical, 20)
@@ -107,7 +107,7 @@ struct TimerView: View {
                     Button(role: .destructive) {
                         
                     } label: {
-                        Text("금연이 버리기")
+                        Text("취소")
                         
                     }
                     
@@ -117,7 +117,7 @@ struct TimerView: View {
                         date = Date()
                         addImage()
                     } label: {
-                        Text("금연이 돕기")
+                        Text("금연 시작하기")
                     }
                 }
                 

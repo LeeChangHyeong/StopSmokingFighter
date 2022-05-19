@@ -17,6 +17,7 @@ extension View {
 #endif
 
 struct UserCheckView: View {
+    @Environment(\.dismiss) private var dismiss
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Binding var cigCount: Double?
     @Binding var cigPrice: Double?
@@ -66,6 +67,9 @@ struct UserCheckView: View {
             .cornerRadius(20)
             .padding(.top, 30)
         }
+        .onDisappear(perform: {
+            dismiss()
+        })
         .onTapGesture {
             hideKeyboard()
         }.navigationBarTitle(Text("흡연량 설정"), displayMode: .inline)

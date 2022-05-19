@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TipPage: View {
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         
         VStack{
@@ -91,6 +92,9 @@ struct TipPage: View {
                 .padding(.vertical, 7)
             
         }
+        .onDisappear(perform: {
+            dismiss()
+        })
         .frame(maxHeight:.infinity)
         .padding(.bottom, 150)
 

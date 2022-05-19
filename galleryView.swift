@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct galleryView: View {
+    @Environment(\.dismiss) private var dismiss
     var pictures: [String] = ["mainPicture","p6","p1","p2","p3","p4","p5"]
     @Binding var collectedImages: [String]
     
@@ -43,7 +44,10 @@ struct galleryView: View {
             }
             
         }
-        }.padding(.horizontal)
+        }
+        .onDisappear(perform: {
+            dismiss()
+        }).padding(.horizontal)
     }
     
 }
