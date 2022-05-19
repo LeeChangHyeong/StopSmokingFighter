@@ -22,6 +22,7 @@
 		32776FE82823D10A00927C5B /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FE72823D10A00927C5B /* TimerManager.swift */; };
 		32776FEA2823D35F00927C5B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FE92823D35F00927C5B /* TimerView.swift */; };
 		32776FEC2823D4E400927C5B /* UserCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FEB2823D4E300927C5B /* UserCheckView.swift */; };
+		3286D1642834FA27006D4A75 /* galleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3286D1632834FA27006D4A75 /* galleryView.swift */; };
 		32CDFE18282A935500DD7033 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CDFE17282A935500DD7033 /* Font.swift */; };
 		32CDFE1B282BD66400DD7033 /* FontBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CDFE1A282BD66400DD7033 /* FontBold.swift */; };
 		32CDFE1D282BD6F200DD7033 /* Fail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CDFE1C282BD6F200DD7033 /* Fail.swift */; };
@@ -68,6 +69,7 @@
 		32776FE92823D35F00927C5B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		32776FEB2823D4E300927C5B /* UserCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCheckView.swift; sourceTree = "<group>"; };
 		32776FEF282436A200927C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3286D1632834FA27006D4A75 /* galleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galleryView.swift; sourceTree = "<group>"; };
 		32CDFE17282A935500DD7033 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		32CDFE1A282BD66400DD7033 /* FontBold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontBold.swift; sourceTree = "<group>"; };
 		32CDFE1C282BD6F200DD7033 /* Fail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fail.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				32F41A4B28265B250030E0BF /* ReasonView.swift */,
 				322AF8C02827C34400632AB5 /* TipPage.swift */,
 				32F41A4D282661190030E0BF /* fightingProgressViewStyle.swift */,
+				3286D1632834FA27006D4A75 /* galleryView.swift */,
 				322AF8BF2827AE3A00632AB5 /* Onboarding */,
 				32776FEB2823D4E300927C5B /* UserCheckView.swift */,
 				32776FBC2823CCD700927C5B /* StopSmokingStandard */,
@@ -317,6 +320,7 @@
 				32776FE82823D10A00927C5B /* TimerManager.swift in Sources */,
 				32776FEC2823D4E400927C5B /* UserCheckView.swift in Sources */,
 				32776FC02823CCD700927C5B /* ContentView.swift in Sources */,
+				3286D1642834FA27006D4A75 /* galleryView.swift in Sources */,
 				322AF8C12827C34400632AB5 /* TipPage.swift in Sources */,
 				32F41A4A282633ED0030E0BF /* SettingView.swift in Sources */,
 				322AF8C42827C73A00632AB5 /* LaunchPageView.swift in Sources */,

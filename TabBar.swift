@@ -12,25 +12,25 @@ struct TabBar: View {
     
     
     
+    
     @StateObject var timerManager = TimerManager()
     @State var showingAlert = false
     @AppStorage("cigCount") var cigCount: Double?
     @AppStorage("cigPrice") var cigPrice: Double?
     @AppStorage("LOSE") var lose: Int = 0
     @AppStorage("Touch") var touch: Bool = false
-    
-    
+    @AppStorage("collectedImages") var collectedImages: [String] = ["mainPicture"]
     
     
     var body: some View {
         TabView {
-            TimerView(timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice, lose: $lose, touch: $touch)
+            TimerView(timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice, lose: $lose, touch: $touch, collectedImages: $collectedImages)
                 .tabItem {
                     Image(systemName: "cross")
                     Text("홈")
                 }
             
-            SettingView(timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice, showingAlert: $showingAlert, touch: $touch, lose: $lose)
+            SettingView(timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice, showingAlert: $showingAlert, touch: $touch, lose: $lose, collectedImages: $collectedImages)
                 .tabItem {
                     Image(systemName: "gearshape")
                     Text("설정/정보")
@@ -50,6 +50,26 @@ struct TabBar: View {
                 
             }
         
+    }
+}
+
+extension Array: RawRepresentable where Element: Codable {
+    public init?(rawValue: String) {
+        guard let data = rawValue.data(using: .utf8),
+              let result = try? JSONDecoder().decode([Element].self, from: data)
+        else {
+            return nil
+        }
+        self = result
+    }
+
+    public var rawValue: String {
+        guard let data = try? JSONEncoder().encode(self),
+              let result = String(data: data, encoding: .utf8)
+        else {
+            return "[]"
+        }
+        return result
     }
 }
 

@@ -39,6 +39,15 @@ struct TimerView: View {
     @State var showingAlert2 = false
     
     
+    @Binding var collectedImages: [String]
+    var pictureName = TimerView.imageName.getImage()
+//    {
+//        didSet {
+//            collectedImages.append(pictureName)
+//        }
+//    }
+    
+    
     static var imageName = ImagePick()
     
     var body: some View {
@@ -49,16 +58,24 @@ struct TimerView: View {
                 .foregroundColor(Color.tillColor)
             
             Text(String(format:"%02i시간 %02i분 %02i초", hours, minutes, seconds))
-                .padding(.bottom, 20)
+                .padding(.bottom, 5)
                 .scaledFontBold(size: 26)
                 .foregroundColor(Color.buttonColor)
             
-            Image(TimerView.imageName.getImage())
+            if touch == false{
+            Image("mainPicture")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 300, height: 300)
                 .background(.gray)
-            
+            } else {
+                Image(pictureName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300, height: 300)
+                    .background(.gray)
+                
+            }
             
             
             
@@ -98,7 +115,7 @@ struct TimerView: View {
                         self.timerManager.start()
                         touch = true
                         date = Date()
-                        
+                        addImage()
                     } label: {
                         Text("금연이 돕기")
                     }
@@ -243,11 +260,14 @@ struct TimerView: View {
             
             
         }.onAppear{
+            
             // current를 쓰면 calander를 아무곳에서 씀
             if touch {
                 if timerManager.secondsElapsed == 0 {
                     self.timerManager.start()
                 }
+                
+                addImage()
                 
                 let calender = Calendar.current
                 let pastDate = date
@@ -258,6 +278,12 @@ struct TimerView: View {
                 timerManager.secondsElapsed = duration
                 
             }
+        }
+    }
+
+    private func addImage() {
+        if !collectedImages.contains(pictureName){
+        collectedImages.append(pictureName)
         }
     }
     
@@ -278,7 +304,7 @@ extension Date: RawRepresentable {
 
 
 class ImagePick{
-    var imageNames: [String] = ["hi","young","soccer","soccer2","hey"]
+    var imageNames: [String] = ["p6","p1","p2","p3","p4","p5"]
     var isEntered : Bool = false
     static var imageName : String = ""
     
