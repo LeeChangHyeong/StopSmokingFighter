@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         TabBar()
             .fullScreenCover(isPresented: $isFirstLaunching) {
-                            OnboardingTabView(isFirstLaunching: $isFirstLaunching)
+                            OnboardingTabView(isFirstLaunching: $isFirstLaunching, isLaunchingPage: true)
                         }
         
 //

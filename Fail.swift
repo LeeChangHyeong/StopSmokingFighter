@@ -55,8 +55,15 @@ struct Fail: View {
                     .padding(.bottom, 10)
                     .scaledFontBold(size: 18)
             }
-            .alert("다시 한 번 생각해보세요", isPresented: $showingAlert) {
+            .alert("다시 한 번 생각해보세요. 금연을 포기하시겠습니까?", isPresented: $showingAlert) {
                 Button(role: .destructive) {
+                    
+                    
+                } label: {
+                    Text("취소")
+                }
+                
+                Button(role: .cancel) {
                     if (lastTime ?? 0) < timerManager.secondsElapsed{
                     lastTime = timerManager.secondsElapsed
                     }
@@ -66,18 +73,14 @@ struct Fail: View {
                     
                     
                 } label: {
-                    Text("금연 포기하기")
-                }
-                
-                Button(role: .cancel) {
-                    
-                } label: {
-                    Text("취소")
+                    Text("포기하기")
                 }
             }
+
             }
             
         }
+        .navigationBarTitle(Text("금연 포기하기"), displayMode: .inline)
         .padding(.bottom, 100)
         .onDisappear(perform: {
             dismiss()

@@ -32,7 +32,7 @@ struct UserCheckView: View {
                 .padding(.horizontal)
                
             
-            TextField("하루 흡연 개비", value: $cigCount, format:.number)
+            TextField("하루에 피는 담배 갯수를 입력하세요.", value: $cigCount, format:.number)
                 .keyboardType(.numberPad)
                 .padding()
                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.buttonColor, lineWidth: 1))
@@ -47,7 +47,7 @@ struct UserCheckView: View {
                 .padding(.horizontal)
                 .padding(.top, 10)
             
-            TextField("피우는 담배 가격(원)", value: $cigPrice, format:.number)
+            TextField("피우는 담배 한 갑의 가격을 입력하세요.", value: $cigPrice, format:.number)
                 .keyboardType(.numberPad)
                 .padding()
                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.buttonColor, lineWidth: 1))

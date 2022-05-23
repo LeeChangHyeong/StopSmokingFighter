@@ -9,7 +9,7 @@ import SwiftUI
 
 struct galleryView: View {
     @Environment(\.dismiss) private var dismiss
-    var pictures: [String] = ["mainPicture","p6","p1","p2","p3","p4","p5"]
+    var pictures: [String] = ["mainPicture","p1","p2","p3","p4","p5","p6","p7","p8","p9","p10","p11","p12","p13","p14","p15"]
     @Binding var collectedImages: [String]
     
     let rows: [GridItem] = [
@@ -23,7 +23,13 @@ struct galleryView: View {
     var body: some View {
         
         ScrollView(){
+            Text("금연 1 ~ 35일차")
+                .frame(maxWidth:.infinity, alignment: .leading)
+                .padding(.top)
+                .padding(.leading)
+                .padding(.bottom, 5)
             LazyVGrid(columns: rows, alignment: .center) {
+                
                 ForEach(pictures, id: \.self) { pictureName in
                     if collectedImages.contains(pictureName) {
                         NavigationLink{
@@ -49,7 +55,13 @@ struct galleryView: View {
                 }
                 
             }
+            Text("금연 36 ~ 70일차")
+                .frame(maxWidth:.infinity, alignment: .leading)
+                .padding(.top, 30)
+                .padding(.leading)
+                .padding(.bottom, 5)
         }
+        .navigationBarTitle(Text("갤러리"), displayMode: .inline)
         .onDisappear(perform: {
             dismiss()
         }).padding(.horizontal)

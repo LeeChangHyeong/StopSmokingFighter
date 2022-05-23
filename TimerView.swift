@@ -13,6 +13,7 @@ extension Color {
     static let infoBackColor = Color("infoBackColor")
     static let intColor = Color("intColor")
     static let tillColor = Color("tillColor")
+    static let circleColor = Color("circleColor")
 }
 
 struct TimerView: View {
@@ -48,13 +49,13 @@ struct TimerView: View {
     
     var body: some View {
         VStack {
-            Text("Til now...")
+            Text("Till now..")
                 .scaledFont(size: 18)
-                .padding(.bottom, 4)
+                .padding(.bottom, 3)
                 .foregroundColor(Color.tillColor)
             
             Text(String(format:"%02i시간 %02i분 %02i초", hours, minutes, seconds))
-                .padding(.bottom, 5)
+                .padding(.bottom, 6)
                 .scaledFontBold(size: 26)
                 .foregroundColor(Color.buttonColor)
             
@@ -65,20 +66,20 @@ struct TimerView: View {
                 .frame(width: 300, height: 300)
                 .background(.gray)
             } else {
-                if timerManager.secondsElapsed < 90{
+//                if timerManager.secondsElapsed < 90{
                 Image(pictureName)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300, height: 300)
                     .background(.gray)
-                } else{
-                    Image(pictureName2)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 300, height: 300)
-                        .background(.gray)
-                    
-                }
+//                } else{
+//                    Image(pictureName2)
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 300, height: 300)
+//                        .background(.gray)
+//
+//                }
                 
             }
             
@@ -107,7 +108,7 @@ struct TimerView: View {
                     //                        .background(.yellow)
                     //                        .cornerRadius(20)
                 }
-                .alert("금연 할 수 있습니다 !", isPresented: $showingAlert2){
+                .alert("금연을 시작하시겠습니까?", isPresented: $showingAlert2){
                     // 주요행동
                     Button(role: .destructive) {
                         
@@ -121,8 +122,9 @@ struct TimerView: View {
                         touch = true
                         date = Date()
                         addImage()
+//                        addImage2()
                     } label: {
-                        Text("금연 시작하기")
+                        Text("시작하기")
                     }
                 }
                 
@@ -142,38 +144,6 @@ struct TimerView: View {
                 
                 
             }
-            //                        Button{
-            //                            self.showingAlert.toggle()
-            //                        } label: {
-            //                            Text("포기하기..")
-            //                                .foregroundColor(.white)
-            //                                .frame(maxWidth:.infinity)
-            //                                .padding(.vertical, 20)
-            //                                .padding(.horizontal, 90)
-            //                                .background(Color.buttonColor)
-            //                                .cornerRadius(10)
-            //                                .padding(.horizontal, 30)
-            //                                .padding(.top, 20)
-            //                                .padding(.bottom, 10)
-            //                                .scaledFontBold(size: 18)
-            //                        }
-            //                        .alert("다시 한 번 생각해보세요..", isPresented: $showingAlert) {
-            //                            Button(role: .destructive) {
-            //                                self.timerManager.stop()
-            //                                touch = false
-            //                                lose += 1
-            //
-            //                            } label: {
-            //                                Text("금연이 죽이기")
-            //                            }
-            //
-            //                            Button(role: .cancel) {
-            //
-            //                            } label: {
-            //                                Text("금연이 살리기")
-            //                            }
-            //                        }
-            //
             
             
             
@@ -318,7 +288,7 @@ extension Date: RawRepresentable {
 
 class ImagePick{
 //    var imageNames: [String] = ["p6","p1","p2","p3","p4","p5"]
-    var imageNames: [String] = ["p6","p1","p2"]
+    var imageNames: [String] = ["p1","p2","p3","p4","p5","p6","p7","p8","p9","p10","p11","p12","p13","p14","p15"]
     var isEntered : Bool = false
     static var imageName : String = ""
     

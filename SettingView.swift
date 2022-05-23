@@ -18,25 +18,27 @@ struct SettingView: View {
     
     @Binding var collectedImages: [String]
     
+    @State var showAppDescription: Bool = true
+    
     var body: some View {
         NavigationView{
             List{
                 Section(header: Text("설정"), footer: Text("")){
                     NavigationLink(destination: UserCheckView(cigCount: $cigCount, cigPrice: $cigPrice)){
-                        Label("흡연량 설정",systemImage: "lungs.fill")
+                        Label("흡연량 설정",systemImage: "lungs")
                         
                     }
                     NavigationLink(destination:Fail(timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice, showingAlert: $showingAlert, touch: $touch, lose: $lose)
                                    
-                                    
+                                   
                     )
-                                   {
-                            Label("금연 포기하기",systemImage: "xmark.circle.fill")
-                            
-                        }
+                    {
+                        Label("금연 포기하기",systemImage: "xmark.circle")
+                        
+                    }
                     
                     
-                   
+                    
                     
                 }.foregroundColor(.black)
                 
@@ -51,14 +53,22 @@ struct SettingView: View {
                     }
                     
                     NavigationLink(destination: galleryView(collectedImages: $collectedImages)){
-                    Label("갤러리",systemImage: "magazine")
+                        Label("갤러리",systemImage: "magazine")
                     }
+                    
+                    NavigationLink(destination: OnboardingTabView(isFirstLaunching: $showAppDescription, isLaunchingPage: false)){
+                        Label("앱 설명", systemImage: "doc.plaintext")
+                    }
+                    .onDisappear {
+                        showAppDescription.toggle()
+                    }
+                    
                 }.foregroundColor(.black)
             }
         }.navigationViewStyle(.stack)
         
         
     }
-   
-
+    
+    
 }

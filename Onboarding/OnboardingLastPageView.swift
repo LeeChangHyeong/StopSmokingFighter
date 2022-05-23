@@ -35,7 +35,7 @@ struct OnboardingLastPageView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .frame(width: 200, height: 50)
-                    .background(Color.blue)
+                    .background(Color("buttonColor"))
                     .cornerRadius(6)
             }
             .padding()
