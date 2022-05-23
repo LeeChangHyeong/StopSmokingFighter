@@ -41,14 +41,10 @@ struct TimerView: View {
     
     @Binding var collectedImages: [String]
     var pictureName = TimerView.imageName.getImage()
-//    {
-//        didSet {
-//            collectedImages.append(pictureName)
-//        }
-//    }
-    
+    var pictureName2 = TimerView.imageName2.getImage()
     
     static var imageName = ImagePick()
+    static var imageName2 = ImagePick2()
     
     var body: some View {
         VStack {
@@ -69,11 +65,20 @@ struct TimerView: View {
                 .frame(width: 300, height: 300)
                 .background(.gray)
             } else {
+                if timerManager.secondsElapsed < 90{
                 Image(pictureName)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300, height: 300)
                     .background(.gray)
+                } else{
+                    Image(pictureName2)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300, height: 300)
+                        .background(.gray)
+                    
+                }
                 
             }
             
@@ -268,6 +273,7 @@ struct TimerView: View {
                 }
                 
                 addImage()
+                addImage2()
                 
                 let calender = Calendar.current
                 let pastDate = date
@@ -284,6 +290,13 @@ struct TimerView: View {
     private func addImage() {
         if !collectedImages.contains(pictureName){
         collectedImages.append(pictureName)
+            
+        }
+    }
+    private func addImage2() {
+        if !collectedImages.contains(pictureName2){
+        collectedImages.append(pictureName2)
+            
         }
     }
     
@@ -304,7 +317,8 @@ extension Date: RawRepresentable {
 
 
 class ImagePick{
-    var imageNames: [String] = ["p6","p1","p2","p3","p4","p5"]
+//    var imageNames: [String] = ["p6","p1","p2","p3","p4","p5"]
+    var imageNames: [String] = ["p6","p1","p2"]
     var isEntered : Bool = false
     static var imageName : String = ""
     
@@ -318,3 +332,16 @@ class ImagePick{
 }
 
 
+class ImagePick2{
+    var imageNames: [String] = ["p3","p4","p5"]
+    var isEntered: Bool = false
+    static var imageName : String = ""
+    
+    func getImage() -> String{
+        if !isEntered{
+            ImagePick2.imageName = imageNames.randomElement() ?? ""
+            isEntered.toggle()
+        }
+        return ImagePick2.imageName
+    }
+}

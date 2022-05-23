@@ -16,34 +16,39 @@ struct galleryView: View {
         GridItem(.flexible()),
         GridItem(.flexible()),
         GridItem(.flexible())
-
+        
     ]
     
     //    @Binding var pictureName: String
     var body: some View {
+        
         ScrollView(){
             LazyVGrid(columns: rows, alignment: .center) {
                 ForEach(pictures, id: \.self) { pictureName in
-                if collectedImages.contains(pictureName) {
-                    Image(pictureName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 100, height: 100)
-                        .overlay(Rectangle().foregroundColor(.gray).opacity(0.2))
-                    
-                } else {
-                    Image(pictureName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 100, height: 100)
-                        .blur(radius: 8)
-                        .overlay(Rectangle().foregroundColor(.gray).opacity(0.2))
-
-                    
+                    if collectedImages.contains(pictureName) {
+                        NavigationLink{
+                            imageView(image: pictureName)
+                        } label: {
+                            Image(pictureName)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100, height: 100)
+                                .overlay(Rectangle().foregroundColor(.gray).opacity(0.2))
+                        }
+                        
+                    } else {
+                        Image(pictureName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100, height: 100)
+                            .blur(radius: 8)
+                            .overlay(Rectangle().foregroundColor(.gray).opacity(0.2))
+                        
+                        
+                    }
                 }
+                
             }
-            
-        }
         }
         .onDisappear(perform: {
             dismiss()
@@ -51,3 +56,4 @@ struct galleryView: View {
     }
     
 }
+

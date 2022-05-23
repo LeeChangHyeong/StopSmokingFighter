@@ -20,6 +20,26 @@ struct Fail: View {
     
     var body: some View {
         VStack{
+           
+            Text("최대 금연 시간")
+                .scaledFontBold(size: 17)
+                
+            Text("\((lastTime ?? 0) / (3600 * 24))일 \((lastTime ?? 0) / 3600 % 24)시간 \((lastTime ?? 0) / 60 % 60)분 \((lastTime ?? 0) % 60)초")
+                .scaledFont(size: 17)
+                .padding(.top, 1)
+            
+                
+            
+            Text("금연 실패 횟수")
+                .padding(.top, 22)
+                .scaledFontBold(size: 17)
+            
+            Text("\(lose)")
+                
+                .scaledFont(size: 17)
+                .padding(.top, 1)
+            
+            if touch {
             Button{
                 self.showingAlert.toggle()
             } label: {
@@ -55,9 +75,10 @@ struct Fail: View {
                     Text("취소")
                 }
             }
-            Text("최대 금연 시간: \((lastTime ?? 0) / (3600 * 24))일 \((lastTime ?? 0) / 3600 % 24)시간 \((lastTime ?? 0) / 60 % 60)분 \((lastTime ?? 0) % 60)초")
-            Text("금연 실패 횟수: \(lose)")
+            }
+            
         }
+        .padding(.bottom, 100)
         .onDisappear(perform: {
             dismiss()
         })

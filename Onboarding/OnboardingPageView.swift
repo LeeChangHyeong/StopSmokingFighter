@@ -15,8 +15,10 @@ struct OnboardingPageView: View {
     var body: some View {
         VStack {
             Image(imageName)
-                .font(.system(size: 100))
+                .resizable()
+                .scaledToFit()
                 .padding()
+                
             Text(title)
                 .font(.largeTitle)
                 .fontWeight(.bold)

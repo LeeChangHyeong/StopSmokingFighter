@@ -26,7 +26,7 @@ struct TabBar: View {
         TabView {
             TimerView(timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice, lose: $lose, touch: $touch, collectedImages: $collectedImages)
                 .tabItem {
-                    Image(systemName: "cross")
+                    Image(systemName: "house")
                     Text("홈")
                 }
             

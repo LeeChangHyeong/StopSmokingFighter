@@ -55,7 +55,7 @@ struct SettingView: View {
                     }
                 }.foregroundColor(.black)
             }
-        }
+        }.navigationViewStyle(.stack)
         
         
     }

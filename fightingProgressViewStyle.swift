@@ -24,7 +24,7 @@ struct honeyBeeProgressViewStyle: ProgressViewStyle {
                             ZStack{
                                 HStack{
                                     Spacer()
-                                        Text("🚬")
+                                        Text("")
                                             .font(.system(size: 30))
                                             .frame(height: CGFloat(geometry.size.height/2)).padding(.bottom)
                                     
@@ -32,7 +32,7 @@ struct honeyBeeProgressViewStyle: ProgressViewStyle {
                                     }
                                 HStack{
                                     
-                                    Text("💨")
+                                    Text("")
                                         .animation(Animation.easeInOut(duration: 2)
                                                             .repeatForever(autoreverses: true))
                                         .font(.system(size: 20))
@@ -48,7 +48,7 @@ struct honeyBeeProgressViewStyle: ProgressViewStyle {
                             
                             
                         }else{
-                            Text("🥳")
+                            Text("")
                                 .font(.system(size: 30))
                                 .frame(maxWidth: CGFloat(geometry.size.width / total * CGFloat(value)), alignment: .bottomTrailing)
                                 .frame(height: CGFloat(geometry.size.height/2))
