@@ -35,6 +35,8 @@ struct TimerView: View {
     @AppStorage("savedDate") var date: Date = Date()
     
     
+    
+    
     @Binding var touch: Bool
     
     @State var showingAlert2 = false
@@ -47,11 +49,42 @@ struct TimerView: View {
     
     static var imageName = ImagePick()
     static var imageName2 = ImagePick2()
-    var coin: Int {timerManager.secondsElapsed / 10}
+    var coin: Int { timerManager.secondsElapsed / 18000 }
     @Binding var coinUse:Int
     
+    @State var coinTimeRemainder: Double = 0
+    @AppStorage("coinTime") var coinTime: Double = 0
+    @State var coinTotal: Double = 18000
+    
+    
+    
+    //    coinTimeRemainder = coinTime.truncatingRemainder(dividingBy: 10)
     var body: some View {
-        VStack {
+        print(coinTimeRemainder)
+        return VStack {
+            ProgressView(value: coinTimeRemainder, total: coinTotal)
+                .padding(.horizontal)
+                .onAppear{
+                    
+                    coinTime = Double(timerManager.secondsElapsed)
+                    coinTime = coinTime.truncatingRemainder(dividingBy: 18000)
+                    coinTimeRemainder = coinTime
+                }
+                .onChange(of: timerManager.secondsElapsed) { _ in
+                    coinTimeRemainder = coinTimeRemainder + 1
+                    if coinTimeRemainder >= coinTotal {
+                        coinTime = Double(timerManager.secondsElapsed)
+                        coinTime = coinTime.truncatingRemainder(dividingBy: 18000)
+                        coinTimeRemainder = coinTime
+                        
+                    }
+                }
+            
+            
+            
+            
+            
+            
             if touch && (coin > coinUse){
                 HStack{
                     Text("내 코인 갯수: \(coin - coinUse)")
@@ -265,7 +298,7 @@ struct TimerView: View {
                 if timerManager.secondsElapsed == 0 {
                     self.timerManager.start()
                 }
-//                getCoin()
+                //                getCoin()
                 addImage()
                 addImage2()
                 
@@ -277,15 +310,21 @@ struct TimerView: View {
                 
                 timerManager.secondsElapsed = duration
                 
+                
+                
             } else {
                 goToZero()
             }
         }
     }
     
-//    func getCoin() {
-//        coin = timerManager.secondsElapsed / 10
-//    }
+    //    func getCoin() {
+    //        coin = timerManager.secondsElapsed / 10
+    //    }
+    
+    
+    
+    
     func goToZero() {
         coin == 0
         coinUse = 0
