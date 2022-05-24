@@ -20,11 +20,12 @@ struct TabBar: View {
     @AppStorage("LOSE") var lose: Int = 0
     @AppStorage("Touch") var touch: Bool = false
     @AppStorage("collectedImages") var collectedImages: [String] = ["mainPicture"]
+    @AppStorage("coinUse") var coinUse = 0
     
     
     var body: some View {
         TabView {
-            TimerView(timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice, lose: $lose, touch: $touch, collectedImages: $collectedImages)
+            TimerView(timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice, lose: $lose, touch: $touch, collectedImages: $collectedImages, coinUse: $coinUse)
                 .tabItem {
                     Image(systemName: "house")
                     Text("홈")

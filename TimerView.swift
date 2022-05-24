@@ -43,12 +43,36 @@ struct TimerView: View {
     @Binding var collectedImages: [String]
     var pictureName = TimerView.imageName.getImage()
     var pictureName2 = TimerView.imageName2.getImage()
+    @AppStorage("pictureName3") var pictureName3 = "mainPicture"
     
     static var imageName = ImagePick()
     static var imageName2 = ImagePick2()
+    var coin: Int {timerManager.secondsElapsed / 10}
+    @Binding var coinUse:Int
     
     var body: some View {
         VStack {
+            if touch && (coin > coinUse){
+                HStack{
+                    Text("내 코인 갯수: \(coin - coinUse)")
+                    // 갱신 버튼
+                    Button{
+                        let pictureName4 = Int.random(in:1...15)
+                        pictureName3 = "p" + String(pictureName4)
+                        addImage()
+                        coinUse = coinUse + 1
+                        
+                        
+                    } label: {
+                        Text("버튼")
+                    }
+                }
+            }else if touch && coin == coinUse{
+                Text("코인이 없어요")
+            }
+            else {
+                Text("금연을 시작하여 코인을 모으세요 !!")
+            }
             Text("Till now..")
                 .scaledFont(size: 18)
                 .padding(.bottom, 3)
@@ -60,26 +84,26 @@ struct TimerView: View {
                 .foregroundColor(Color.buttonColor)
             
             if touch == false{
-            Image("mainPicture")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 300, height: 300)
-                .background(.gray)
-            } else {
-//                if timerManager.secondsElapsed < 90{
-                Image(pictureName)
+                Image("mainPicture")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300, height: 300)
                     .background(.gray)
-//                } else{
-//                    Image(pictureName2)
-//                        .resizable()
-//                        .scaledToFit()
-//                        .frame(width: 300, height: 300)
-//                        .background(.gray)
-//
-//                }
+            } else {
+                //                if timerManager.secondsElapsed < 90{
+                Image(pictureName3)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300, height: 300)
+                    .background(.gray)
+                //                } else{
+                //                    Image(pictureName2)
+                //                        .resizable()
+                //                        .scaledToFit()
+                //                        .frame(width: 300, height: 300)
+                //                        .background(.gray)
+                //
+                //                }
                 
             }
             
@@ -122,7 +146,7 @@ struct TimerView: View {
                         touch = true
                         date = Date()
                         addImage()
-//                        addImage2()
+                        //                        addImage2()
                     } label: {
                         Text("시작하기")
                     }
@@ -241,7 +265,7 @@ struct TimerView: View {
                 if timerManager.secondsElapsed == 0 {
                     self.timerManager.start()
                 }
-                
+//                getCoin()
                 addImage()
                 addImage2()
                 
@@ -253,19 +277,29 @@ struct TimerView: View {
                 
                 timerManager.secondsElapsed = duration
                 
+            } else {
+                goToZero()
             }
         }
     }
-
+    
+//    func getCoin() {
+//        coin = timerManager.secondsElapsed / 10
+//    }
+    func goToZero() {
+        coin == 0
+        coinUse = 0
+    }
+    
     private func addImage() {
-        if !collectedImages.contains(pictureName){
-        collectedImages.append(pictureName)
+        if !collectedImages.contains(pictureName3){
+            collectedImages.append(pictureName3)
             
         }
     }
     private func addImage2() {
         if !collectedImages.contains(pictureName2){
-        collectedImages.append(pictureName2)
+            collectedImages.append(pictureName2)
             
         }
     }
@@ -287,7 +321,7 @@ extension Date: RawRepresentable {
 
 
 class ImagePick{
-//    var imageNames: [String] = ["p6","p1","p2","p3","p4","p5"]
+    //    var imageNames: [String] = ["p6","p1","p2","p3","p4","p5"]
     var imageNames: [String] = ["p1","p2","p3","p4","p5","p6","p7","p8","p9","p10","p11","p12","p13","p14","p15"]
     var isEntered : Bool = false
     static var imageName : String = ""
