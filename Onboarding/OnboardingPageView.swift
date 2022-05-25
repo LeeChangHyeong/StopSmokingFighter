@@ -13,20 +13,27 @@ struct OnboardingPageView: View {
     let subtitle: String
     
     var body: some View {
+        GeometryReader{ geometry in
+            
+        
         VStack {
             Image(imageName)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 300, height: 300)
+                .frame(width: geometry.size.width - 100, height: geometry.size.height - 400)
                 .padding()
                 
             Text(title)
-                .font(.largeTitle)
+                .font(.title)
                 .fontWeight(.bold)
-                .padding()
-            Text(subtitle)
-                .font(.title2)
                 .padding(.horizontal)
+                .padding(.vertical,5)
+                .frame(maxWidth:.infinity,alignment: .leading)
+            Text(subtitle)
+                .font(.body)
+                .padding(.horizontal)
+                .frame(maxWidth:.infinity,alignment: .leading)
+            
             
             HStack {
                 Spacer()
@@ -34,6 +41,8 @@ struct OnboardingPageView: View {
                     .padding()
                     .font(.largeTitle)
             }
+        }
+        .position(x:geometry.size.width/2 , y: geometry.size.height/2)
         }
         
     }
