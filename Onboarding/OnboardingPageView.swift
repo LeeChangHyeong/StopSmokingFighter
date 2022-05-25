@@ -42,7 +42,7 @@ struct OnboardingPageView: View {
                     .font(.largeTitle)
             }
         }
-        .position(x:geometry.size.width/2 , y: geometry.size.height/2)
+        .position(x:geometry.size.width/2 , y: (geometry.size.height/2)-40)
         }
         
     }
@@ -51,7 +51,7 @@ struct OnboardingPageView: View {
 struct OnboardingPageView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingPageView(
-            imageName: "p1",
+            imageName: "mainPicture",
             title: "금연이",
             subtitle: "금연이는 여러분의 폐 속에 자리 잡고 있는 금연이를 물리쳐 줄 친구입니다"
         )

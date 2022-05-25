@@ -24,14 +24,15 @@ struct OnboardingLastPageView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: geometry.size.width - 100, height: geometry.size.height - 400 )
-                .padding()
+                .padding(.vertical)
+               
             
             
             Text(title)
                 .font(.title)
                 .fontWeight(.bold)
                 .padding(.horizontal)
-                .padding(.vertical,5)
+                .padding(.bottom)
                 .frame(maxWidth:.infinity,alignment: .leading)
             Text(subtitle)
                 .font(.body)
@@ -52,11 +53,14 @@ struct OnboardingLastPageView: View {
                     
                     
             }
-            .padding()
+            .padding(.horizontal)
+            .padding(.top, 50)
+            
         
         
         }
-        .position(x:geometry.size.width/2 , y: geometry.size.height/2)
+        .position(x:geometry.size.width/2 , y: (geometry.size.height/2)-40)
+
 
         }
     }

@@ -18,6 +18,11 @@ struct LaunchPageView: View {
             ContentView()
         }
         else{
+            ZStack{
+                Rectangle()
+                    .foregroundColor(.buttonColor)
+                    .scaledToFill()
+                    .ignoresSafeArea()
             VStack{
                 
                 HStack{
@@ -56,6 +61,7 @@ struct LaunchPageView: View {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     self.isActive = true
                 }
+            }
             }
         }
     }

@@ -23,11 +23,8 @@ struct galleryView: View {
     var body: some View {
         
         ScrollView(){
-            Text("금연 1 ~ 35일차")
-                .frame(maxWidth:.infinity, alignment: .leading)
-                .padding(.top)
-                .padding(.leading)
-                .padding(.bottom, 5)
+          
+                
             LazyVGrid(columns: rows, alignment: .center) {
                 
                 ForEach(pictures, id: \.self) { pictureName in
@@ -55,7 +52,6 @@ struct galleryView: View {
                 }
                 
             }
-            Text("금연 36 ~ 70일차")
                 .frame(maxWidth:.infinity, alignment: .leading)
                 .padding(.top, 30)
                 .padding(.leading)

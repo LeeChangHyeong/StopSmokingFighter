@@ -168,10 +168,17 @@ struct TimerView: View {
                         .padding(.horizontal, 22)
                         .foregroundColor(.gray)
                     Spacer()
-                    Text("코인 갯수: \(coin - coinUse)")
+                    if 0 >= (coin - coinUse) {
+                    Text("코인 갯수: 0")
                         .padding(.horizontal, 22)
                         .scaledFont(size: 15)
                         .foregroundColor(.gray)
+                    }else{
+                        Text("코인 갯수: \(coin - coinUse)")
+                            .padding(.horizontal, 22)
+                            .scaledFont(size: 15)
+                            .foregroundColor(.gray)
+                    }
                 }
                 
                 if touch && (coin > coinUse){
