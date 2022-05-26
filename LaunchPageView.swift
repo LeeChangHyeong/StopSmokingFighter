@@ -27,7 +27,7 @@ struct LaunchPageView: View {
                 Image("launchPageImage")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 300, height: 300)
+                    .frame(width: 200, height: 200)
                     
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
