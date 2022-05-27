@@ -13,9 +13,11 @@ struct galleryView: View {
     @Binding var collectedImages: [String]
     
     let rows: [GridItem] = [
+        
         GridItem(.flexible()),
         GridItem(.flexible()),
         GridItem(.flexible())
+//        GridItem(.flexible())
         
     ]
     
@@ -25,7 +27,7 @@ struct galleryView: View {
         ScrollView(){
           
                 
-            LazyVGrid(columns: rows, alignment: .center) {
+            LazyVGrid(columns: rows) {
                 
                 ForEach(pictures, id: \.self) { pictureName in
                     if collectedImages.contains(pictureName) {
@@ -35,15 +37,16 @@ struct galleryView: View {
                             Image(pictureName)
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 100, height: 100)
+//                                .frame(width: 100, height: 100)
                                 .overlay(Rectangle().foregroundColor(.gray).opacity(0.2))
                         }
                         
                     } else {
+                        
                         Image(pictureName)
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 100, height: 100)
+//                            .frame(width: 100, height: 100)
                             .blur(radius: 8)
                             .overlay(Rectangle().foregroundColor(.gray).opacity(0.2))
                         
@@ -52,10 +55,8 @@ struct galleryView: View {
                 }
                 
             }
-                .frame(maxWidth:.infinity, alignment: .leading)
-                .padding(.top, 30)
-                .padding(.leading)
-                .padding(.bottom, 5)
+
+            
         }
         .navigationBarTitle(Text("갤러리"), displayMode: .inline)
         .onDisappear(perform: {

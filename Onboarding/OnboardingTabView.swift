@@ -53,7 +53,8 @@ struct OnboardingTabView: View {
             }
             
         }
-        .tabViewStyle(PageTabViewStyle())
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
         .onDisappear(perform: {
             dismiss()
         })

@@ -35,12 +35,12 @@ struct OnboardingPageView: View {
                 .frame(maxWidth:.infinity,alignment: .leading)
             
             
-            HStack {
-                Spacer()
-                Image(systemName: "arrow.forward.circle")
-                    .padding()
-                    .font(.largeTitle)
-            }
+//            HStack {
+//                Spacer()
+//                Image(systemName: "arrow.forward.circle")
+//                    .padding()
+//                    .font(.largeTitle)
+//            }
         }
         .position(x:geometry.size.width/2 , y: (geometry.size.height/2)-40)
         }
