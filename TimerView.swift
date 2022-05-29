@@ -15,6 +15,53 @@ extension Color {
     static let tillColor = Color("tillColor")
     static let circleColor = Color("circleColor")
 }
+struct CardFront : View {
+    let imageName : String
+    let width : CGFloat
+    let height : CGFloat
+    @Binding var degree : Double
+
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(.white)
+                .frame(width: width, height: height)
+                .shadow(color: .gray, radius: 2, x: 0, y: 0)
+
+            Image(imageName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: width, height: height)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+
+        }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
+    }
+}
+
+struct CardBack : View {
+    let width : CGFloat
+    let height : CGFloat
+    @Binding var degree : Double
+
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(.white)
+                .frame(width: width, height: height)
+                .shadow(color: .gray, radius: 2, x: 0, y: 0)
+
+            Image("180")
+                .resizable()
+                .scaledToFill()
+                .frame(width: width, height: height)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+               
+                
+
+        }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
+
+    }
+}
 
 struct TimerView: View {
     // 변경값을 관찰하기 위해 ObservaleObject 추가
@@ -53,11 +100,37 @@ struct TimerView: View {
     @AppStorage("coinTime") var coinTime: Double = 0
     @State var coinTotal: Double = 36000
     
+    @State var backDegree = 0.0
+    @State var frontDegree = -90.0
+    @State var isFlipped = false
+
+    
+    let durationAndDelay : CGFloat = 0.3
+    func flipCard () {
+        isFlipped = !isFlipped
+        if isFlipped {
+            withAnimation(.linear(duration: durationAndDelay)) {
+                backDegree = 90
+            }
+            withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
+                frontDegree = 0
+            }
+        } else {
+            withAnimation(.linear(duration: durationAndDelay)) {
+                frontDegree = -90
+            }
+            withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
+                backDegree = 0
+            }
+        }
+    }
     
     
     //    coinTimeRemainder = coinTime.truncatingRemainder(dividingBy: 10)
     var body: some View {
         GeometryReader { geometry in
+//            let width : CGFloat = geometry.size.width - 50
+//            let height : CGFloat = geometry.size.height - 380
             VStack {
                 Text(String(format:"D - %02i", days))
                     .frame(maxWidth:.infinity)
@@ -65,11 +138,21 @@ struct TimerView: View {
                     .foregroundColor(.buttonColor)
                     .opacity(0.4)
                 
-    
+                if coin - coinUse > 0{
                 Text(String(format:"%02i시간 %02i분 %02i초", hours, minutes, seconds))
                     .scaledFontBold(size: 22)
                     .foregroundColor(Color.buttonColor)
                     .padding(.top, 0.1)
+                    .padding(.bottom, 15)
+                } else {
+                    Text(String(format:"%02i시간 %02i분 %02i초", hours, minutes, seconds))
+                        .scaledFontBold(size: 22)
+                        .foregroundColor(Color.buttonColor)
+                        .padding(.top, 0.1)
+                        .padding(.bottom, 30)
+                }
+                
+             
                 
                 if touch == false{
                     ZStack{
@@ -119,11 +202,24 @@ struct TimerView: View {
                         
                     
                 } else {
+//                    ZStack{
+//                        CardFront(imageName: pictureName3, width: width, height: height, degree: $frontDegree)
+//                        CardBack(width: width, height: height, degree: $backDegree)
+//                    }
+//                    .onTapGesture {
+//                        flipCard ()
+//                    }
                     //                if timerManager.secondsElapsed < 90{
                     Image(pictureName3)
                         .resizable()
                         .scaledToFit()
                         .frame(width: geometry.size.width - 50, height: geometry.size.height - 380)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .shadow(color: .gray, radius: 2, x: 0, y: 0)
+                        
+                        
+                        
+                        
                        
                     //                } else{
                     //                    Image(pictureName2)
@@ -180,7 +276,7 @@ struct TimerView: View {
                     
                         // 갱신 버튼
                         Button{
-                            let pictureName4 = Int.random(in:1...15)
+                            let pictureName4 = Int.random(in:1...16)
                             pictureName3 = "p" + String(pictureName4)
                             addImage()
                             coinUse = coinUse + 1

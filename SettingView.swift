@@ -23,27 +23,26 @@ struct SettingView: View {
     var body: some View {
         NavigationView{
             List{
-                Section(header: Text("설정"), footer: Text("")){
+                Section(header: Text("설정")){
                     NavigationLink(destination: UserCheckView(cigCount: $cigCount, cigPrice: $cigPrice)){
                         Label("흡연량 설정",systemImage: "lungs")
-                        
                     }
                     NavigationLink(destination:Fail(timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice, showingAlert: $showingAlert, touch: $touch, lose: $lose)
-                                   
                                    
                     )
                     {
                         Label("금연 포기하기",systemImage: "xmark.circle")
                         
                     }
-                    
-                    
-                    
-                    
                 }.foregroundColor(.black)
+                    
+                    
+                    
+                    
+                    
+             
                 
-                
-                Section(header: Text("금연 도우미"), footer: Text("")){
+                Section(header: Text("금연 도우미")){
                     NavigationLink(destination: TipPage()){
                         Label("금연 꿀팁",systemImage: "lightbulb")
                         
@@ -56,6 +55,7 @@ struct SettingView: View {
                         Label("갤러리",systemImage: "magazine")
                     }
                     
+                    
                     NavigationLink(destination: OnboardingTabView(isFirstLaunching: $showAppDescription, isLaunchingPage: false)){
                         Label("앱 설명", systemImage: "doc.plaintext")
                     }
@@ -65,7 +65,19 @@ struct SettingView: View {
                     
                 }.foregroundColor(.black)
             }
-        }.navigationViewStyle(.stack)
+            .navigationBarHidden(true)
+            
+            
+         
+                           
+        }
+        .navigationViewStyle(.stack)
+           
+        
+
+            
+          
+        
         
         
     }
