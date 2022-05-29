@@ -33,17 +33,11 @@ struct TimerView: View {
     @Binding var lose: Int
     
     @AppStorage("savedDate") var date: Date = Date()
-    
     //    var coinHours: Double
     //    var coinMinutes: Double
     //    var coinSeconds: Double
-    
-    
     @Binding var touch: Bool
-    
     @State var showingAlert2 = false
-    
-    
     @Binding var collectedImages: [String]
 //    var pictureName = TimerView.imageName.getImage()
 //    var pictureName2 = TimerView.imageName2.getImage()
@@ -322,7 +316,6 @@ struct TimerView: View {
                 
             }
             .onAppear{
-                
                 // current를 쓰면 calander를 아무곳에서 씀
                 if touch {
                     if timerManager.secondsElapsed == 0 {
@@ -331,7 +324,6 @@ struct TimerView: View {
                     //                getCoin()
                     addImage()
 //                    addImage2()
-                    
                     let calender = Calendar.current
                     let pastDate = date
                     let nowDate = Date()
@@ -340,8 +332,6 @@ struct TimerView: View {
                     
                     timerManager.secondsElapsed = duration
                     
-                    
-                    
                 } else {
                     goToZero()
                 }
@@ -349,10 +339,6 @@ struct TimerView: View {
             .position(x:geometry.size.width/2 , y: geometry.size.height/2)
         }
     }
-    
-    //    func getCoin() {
-    //        coin = timerManager.secondsElapsed / 10
-    //    }
     
     
     
