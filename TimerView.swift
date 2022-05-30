@@ -86,7 +86,7 @@ struct TimerView: View {
 //            let width : CGFloat = geometry.size.width - 50
 //            let height : CGFloat = geometry.size.height - 380
             VStack {
-                Text(String(format:"D - %02i", days))
+                Text(String(format:"금연한지 %02i일", days))
                     .frame(maxWidth:.infinity)
                     .scaledFontBold(size: 20)
                     .foregroundColor(.buttonColor)
@@ -126,12 +126,6 @@ struct TimerView: View {
                                 .cornerRadius(10)
                                 .scaledFontBold(size: 18)
                                 .lineLimit(1)
-                            
-                            //                        .foregroundColor(.black)
-                            //                        .padding(.vertical, 20)
-                            //                        .padding(.horizontal, 90)
-                            //                        .background(.yellow)
-                            //                        .cornerRadius(20)
                         }
                         .alert("금연을 시작하시겠습니까?", isPresented: $showingAlert2){
                             // 주요행동
@@ -230,7 +224,7 @@ struct TimerView: View {
                     
                         // 갱신 버튼
                         Button{
-                            let pictureName4 = Int.random(in:1...17)
+                            let pictureName4 = Int.random(in:1...20)
                             pictureName3 = "p" + String(pictureName4)
                             addImage()
                             coinUse = coinUse + 1
@@ -247,113 +241,81 @@ struct TimerView: View {
                     
                 }
                 
-//
-//
-//                if touch == false {
-//
-//
-//        }
-//                    else {
-//
-//                    Text(String(format:"D - %02i", days))
-//                        .foregroundColor(.white)
-//                        .frame(maxWidth:.infinity)
-//                        .padding(.vertical, 20)
-//                        .padding(.horizontal, 90)
-//                        .background(Color.buttonColor)
-//                        .cornerRadius(10)
-//                        .padding(.horizontal, 30)
-//                        .padding(.top, 20)
-//                        .padding(.bottom, 10)
-//                        .scaledFontBold(size: 18)
-//
-//
-//                }
                 
                 
                 
-                VStack(alignment: .leading){
+                VStack{
                     HStack{
+                        Spacer()
                         VStack{
                             Image(systemName: "dollarsign.circle.fill")
-                                .padding(.bottom, 8)
-                                .font(.system(size: 20))
+                                .font(.system(size: 30))
+                                .padding(.bottom, 5)
                             
                             Text("\(String(format:"%.01lf",((totalPrice/10000))))만원")
-                                .foregroundColor(Color.intColor)
-                                .padding(.bottom, 5)
+                                .foregroundColor(Color.buttonColor)
                                 .scaledFont(size: 16)
+                                .padding(.bottom, 0.1)
+                                
                             
                             Text("절약한 돈")
-                                .frame(maxWidth:.infinity)
-                                .foregroundColor(.white)
-                                .padding(.horizontal, 27)
+                                .foregroundColor(.infoBackColor)
+                                .opacity(0.5)
+                                
+                               
                             //                            .background(.black)
                                 .scaledFontBold(size: 15)
                             
                         }
-                        .foregroundColor(.white)
-                        .padding(.vertical, 20)
-                        .background(Color.infoBackColor)
-                        .cornerRadius(20)
                         
-                        
+                        Spacer()
                         VStack{
                             Image(systemName: "lungs.fill")
-                                .padding(.bottom, 8)
-                                .font(.title3)
+                                .font(.system(size: 25))
+                                .padding(.bottom, 5)
                             
                             Text("\(String(format:"%.01lf",((numCig))))개")
-                                .foregroundColor(Color.intColor)
-                                .padding(.bottom, 5)
+                                .foregroundColor(Color.buttonColor)
                                 .scaledFont(size: 16)
+                                .padding(.bottom, 0.1)
                             
                             
                             Text("아낀 담배")
-                                .foregroundColor(.white)
-                                .padding(.horizontal, 27)
-                                .frame(maxWidth:.infinity)
+                                .foregroundColor(.infoBackColor)
                             //                            .background(.black)
                                 .scaledFontBold(size: 15)
+                                .opacity(0.5)
                         }
-                        .foregroundColor(.white)
-                        .padding(.vertical, 20)
-                        .background(Color.infoBackColor)
-                        .cornerRadius(20)
                         
+                        Spacer()
                         
                         VStack{
                             Image(systemName: "heart.fill")
-                            
-                                .padding(.bottom, 8)
-                                .font(.title2)
+                                .font(.system(size: 28))
+                                .padding(.bottom, 5)
                             
                             Text("\(String(format:"%.01lf",((numCig*720/60/60))))시간")
-                                .foregroundColor(Color.intColor)
-                                .padding(.bottom, 5)
+                                .foregroundColor(Color.buttonColor)
                                 .scaledFont(size: 16)
+                                .padding(.bottom, 0.1)
                             
                             
                             Text("수명 연장")
-                                .foregroundColor(.white)
-                                .padding(.horizontal, 27)
-                                .frame(maxWidth:.infinity)
+                                .foregroundColor(.infoBackColor)
                             //                            .background(.black)
                                 .scaledFontBold(size: 15)
+                                .opacity(0.5)
                         }
-                        .foregroundColor(.white)
-                        .padding(.vertical, 20)
-                        .background(Color.infoBackColor)
-                        .cornerRadius(20)
                         
+                        Spacer()
                         
                         
                     }
                     .padding(.top, 10)
-                    .padding(.horizontal)
+                    
                     // 1개에 12분
                     //720초
-                }
+                }.padding(.top)
                 
                 //            Text("금연이 사망 횟수: \(lose)회")
                 //                .foregroundColor(.white)

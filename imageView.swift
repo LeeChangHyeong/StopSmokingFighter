@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CardFront : View {
+    let imageName: String
     let width : CGFloat
     let height : CGFloat
     @Binding var degree : Double
@@ -19,9 +20,9 @@ struct CardFront : View {
                 .frame(width: width, height: height)
                 .shadow(color: .gray, radius: 2, x: 0, y: 0)
 
-            Image("180")
+            Image(imageName)
                 .resizable()
-                .scaledToFill()
+                .scaledToFit()
                 .frame(width: width, height: height)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
 
@@ -42,9 +43,9 @@ struct CardBack : View {
                 .frame(width: width, height: height)
                 .shadow(color: .gray, radius: 2, x: 0, y: 0)
 
-            Image(imageName)
+            Image("180")
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
                 .frame(width: width, height: height)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                
@@ -56,8 +57,8 @@ struct CardBack : View {
 }
 
 struct imageView: View {
-    @State var backDegree = 0.0
-    @State var frontDegree = -90.0
+    @State var backDegree = 90.0
+    @State var frontDegree = 0.0
     @State var isFlipped = false
     
     let durationAndDelay : CGFloat = 0.3
@@ -65,17 +66,21 @@ struct imageView: View {
         isFlipped = !isFlipped
         if isFlipped {
             withAnimation(.linear(duration: durationAndDelay)) {
-                backDegree = 90
-            }
-            withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
-                frontDegree = 0
-            }
-        } else {
-            withAnimation(.linear(duration: durationAndDelay)) {
+//                backDegree = 90
                 frontDegree = -90
             }
             withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
+//                frontDegree = 0
                 backDegree = 0
+            }
+        } else {
+            withAnimation(.linear(duration: durationAndDelay)) {
+//                frontDegree = -90
+                backDegree = 90
+            }
+            withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
+//                backDegree = 0
+                frontDegree = 0
             }
         }
     }
@@ -87,8 +92,9 @@ struct imageView: View {
             let width : CGFloat = geometry.size.width - 50
             let height : CGFloat = geometry.size.height - 300
         ZStack{
-            CardFront(width: width, height: height, degree: $frontDegree)
             CardBack(imageName: image, width: width, height: height, degree: $backDegree)
+            CardFront(imageName: image, width: width, height: height, degree: $frontDegree)
+            
                
         }
         .onTapGesture {

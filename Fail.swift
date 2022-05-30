@@ -29,6 +29,7 @@ struct Fail: View {
                 Text("\((lastTime ?? 0) / (3600 * 24))일 \((lastTime ?? 0) / 3600 % 24)시간 \((lastTime ?? 0) / 60 % 60)분 \((lastTime ?? 0) % 60)초")
                     .scaledFont(size: 17)
                     .padding(.top, 1)
+                    .padding(.bottom, 14)
                 
                 
                 
@@ -95,15 +96,19 @@ struct Fail: View {
                 Image("p17")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: geometry.size.width - 30, height: geometry.size.height - 350)
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
-                    .shadow(color: .gray, radius: 2, x: 0, y: 0)
+                    .frame(width: geometry.size.width - 16, height: geometry.size.height - 300)
+//                    .clipShape(RoundedRectangle(cornerRadius: 20))
+//                    .shadow(color: .gray, radius: 2, x: 0, y: 0)
+                
                 Text("""
                      "여기까지냐 애송이"
                      """)
                     .font(.title)
+                    .bold()
+                    
                 Text("다시 금연을 시작하여 금연이를 도와주세요!!")
                     .font(.body)
+                    .padding(.top, 2)
             }
             
             
