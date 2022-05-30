@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingView: View {
+    @State var isActive : Bool = false
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var timerManager: TimerManager
     @Binding var cigCount: Double?
@@ -51,9 +52,11 @@ struct SettingView: View {
                         Label("금연 중 내 몸 변화",systemImage: "heart")
                     }
                     
-                    NavigationLink(destination: galleryView(collectedImages: $collectedImages)){
+                    NavigationLink(destination: galleryView(isActive1: self.$isActive, collectedImages: $collectedImages), isActive: self.$isActive
+                    ){
                         Label("갤러리",systemImage: "magazine")
                     }
+                    .isDetailLink(false)
                     
                     
                     NavigationLink(destination: OnboardingTabView(isFirstLaunching: $showAppDescription, isLaunchingPage: false)){

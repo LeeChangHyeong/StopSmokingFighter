@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Combine
 
 struct TabBar: View {
     
@@ -29,17 +29,22 @@ struct TabBar: View {
                 .tabItem {
                     Image(systemName: "house")
                     Text("홈")
+                    
                 }
+                
             
             SettingView(timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice, showingAlert: $showingAlert, touch: $touch, lose: $lose, collectedImages: $collectedImages)
                 .tabItem {
+        
                     Image(systemName: "gearshape")
                     Text("설정/정보")
                 }
-        }.accentColor(Color.intColor)
+        }        .accentColor(Color.intColor)
+            
+            
             .onAppear{
-                let appearance = UITabBarAppearance()
                 
+                let appearance = UITabBarAppearance()
                 appearance.backgroundColor = UIColor(Color("buttonColor"))
                 
                 UITabBar.appearance().standardAppearance = appearance

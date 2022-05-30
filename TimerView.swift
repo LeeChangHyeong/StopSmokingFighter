@@ -57,7 +57,7 @@ struct TimerView: View {
     @State var backDegree = 0.0
     @State var frontDegree = -90.0
     @State var isFlipped = false
-
+    
     
     let durationAndDelay : CGFloat = 0.3
     func flipCard () {

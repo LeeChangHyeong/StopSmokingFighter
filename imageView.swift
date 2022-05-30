@@ -5,7 +5,15 @@
 //  Created by 이창형 on 2022/05/23.
 //
 
+
+
+
+
+
+
 import SwiftUI
+
+
 
 struct CardFront : View {
     let imageName: String
@@ -29,6 +37,7 @@ struct CardFront : View {
         }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }
 }
+
 
 struct CardBack : View {
     let imageName: String
@@ -84,19 +93,33 @@ struct imageView: View {
             }
         }
     }
+//    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
+//    @Environment(\.dismiss) private var dismiss
     var image:String
+    @Binding var isActive2:Bool
     var body: some View {
+        
+        
         
         GeometryReader{ geometry in
             let width : CGFloat = geometry.size.width - 50
             let height : CGFloat = geometry.size.height - 300
+            
         ZStack{
             CardBack(imageName: image, width: width, height: height, degree: $backDegree)
             CardFront(imageName: image, width: width, height: height, degree: $frontDegree)
+            Button{
+                self.isActive2 = false
+            } label: {
+                Text("아아아")
+            }
             
-               
         }
+        .onDisappear(perform: {
+//            self.isActive2 = false
+           
+        })
         .onTapGesture {
             flipCard ()
         }

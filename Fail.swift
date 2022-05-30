@@ -6,6 +6,7 @@
 //
 import SwiftUI
 
+
 struct Fail: View {
     @Environment(\.dismiss) private var dismiss
     @ObservedObject var timerManager: TimerManager
@@ -111,7 +112,7 @@ struct Fail: View {
                     .font(.title)
                     .bold()
                     
-                Text("다시 금연을 시작하여 금연이를 도와주세요!!")
+                Text("다시 금연을 시작하여 금연이를 도와주세요!")
                     .font(.body)
                     .padding(.top, 2)
                     Spacer()
