@@ -46,7 +46,7 @@ struct TimerView: View {
     
 //    static var imageName = ImagePick()
 //    static var imageName2 = ImagePick2()
-    var coin: Int { timerManager.secondsElapsed / 10 }
+    var coin: Int { timerManager.secondsElapsed / 36000 }
     // 18000
     @Binding var coinUse:Int
     
