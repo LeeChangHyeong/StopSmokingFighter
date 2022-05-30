@@ -15,53 +15,7 @@ extension Color {
     static let tillColor = Color("tillColor")
     static let circleColor = Color("circleColor")
 }
-struct CardFront : View {
-    let imageName : String
-    let width : CGFloat
-    let height : CGFloat
-    @Binding var degree : Double
 
-    var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(.white)
-                .frame(width: width, height: height)
-                .shadow(color: .gray, radius: 2, x: 0, y: 0)
-
-            Image(imageName)
-                .resizable()
-                .scaledToFit()
-                .frame(width: width, height: height)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-
-        }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
-    }
-}
-
-struct CardBack : View {
-    let width : CGFloat
-    let height : CGFloat
-    @Binding var degree : Double
-
-    var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(.white)
-                .frame(width: width, height: height)
-                .shadow(color: .gray, radius: 2, x: 0, y: 0)
-
-            Image("180")
-                .resizable()
-                .scaledToFill()
-                .frame(width: width, height: height)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-               
-                
-
-        }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
-
-    }
-}
 
 struct TimerView: View {
     // 변경값을 관찰하기 위해 ObservaleObject 추가
@@ -276,7 +230,7 @@ struct TimerView: View {
                     
                         // 갱신 버튼
                         Button{
-                            let pictureName4 = Int.random(in:1...16)
+                            let pictureName4 = Int.random(in:1...17)
                             pictureName3 = "p" + String(pictureName4)
                             addImage()
                             coinUse = coinUse + 1

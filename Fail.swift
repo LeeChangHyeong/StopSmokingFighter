@@ -15,6 +15,7 @@ struct Fail: View {
     @Binding var touch: Bool
     @Binding var lose: Int
     @AppStorage("lastTime") var lastTime: Int?
+    @State private var showPopOver = false
     
     
     
@@ -72,6 +73,7 @@ struct Fail: View {
                         self.timerManager.stop()
                         touch = false
                         lose += 1
+                        showPopOver = true
                         
                     } label: {
                         Text("포기하기")
@@ -80,18 +82,7 @@ struct Fail: View {
                     
                 }
                 
-                    if touch {
-                        
-                    } else {
-                        Image("p4")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: geometry.size.width - 30, height: geometry.size.height - 350)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                            .shadow(color: .gray, radius: 2, x: 0, y: 0)
-                        
-                        
-                    }
+                
                 
             }
             .navigationBarTitle(Text("금연 포기하기"), displayMode: .inline)
@@ -100,6 +91,20 @@ struct Fail: View {
                 dismiss()
             })
             .position(x:geometry.size.width/2 , y: geometry.size.height/2)
+            .popover(isPresented:$showPopOver) {
+                Image("p17")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: geometry.size.width - 30, height: geometry.size.height - 350)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .shadow(color: .gray, radius: 2, x: 0, y: 0)
+                Text("""
+                     "여기까지냐 애송이"
+                     """)
+                    .font(.title)
+                Text("다시 금연을 시작하여 금연이를 도와주세요!!")
+                    .font(.body)
+            }
             
             
         }
