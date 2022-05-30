@@ -91,15 +91,20 @@ struct Fail: View {
             .onDisappear(perform: {
                 dismiss()
             })
-            .position(x:geometry.size.width/2 , y: geometry.size.height/2)
+            .position(x:geometry.size.width/2 , y: geometry.size.height/2 - 20)
             .popover(isPresented:$showPopOver) {
+                VStack{
+                    
                 Image("p17")
                     .resizable()
                     .scaledToFit()
                     .frame(width: geometry.size.width - 16, height: geometry.size.height - 300)
+                    .padding(.top, 100)
+              
+                  
 //                    .clipShape(RoundedRectangle(cornerRadius: 20))
 //                    .shadow(color: .gray, radius: 2, x: 0, y: 0)
-                
+               
                 Text("""
                      "여기까지냐 애송이"
                      """)
@@ -109,8 +114,14 @@ struct Fail: View {
                 Text("다시 금연을 시작하여 금연이를 도와주세요!!")
                     .font(.body)
                     .padding(.top, 2)
+                    Spacer()
+                    
+                }
+                    
+                
             }
             
+
             
         }
     }

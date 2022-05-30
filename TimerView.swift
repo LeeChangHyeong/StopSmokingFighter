@@ -46,7 +46,7 @@ struct TimerView: View {
     
 //    static var imageName = ImagePick()
 //    static var imageName2 = ImagePick2()
-    var coin: Int { timerManager.secondsElapsed / 36000 }
+    var coin: Int { timerManager.secondsElapsed / 36000}
     // 18000
     @Binding var coinUse:Int
     
@@ -103,7 +103,7 @@ struct TimerView: View {
                         .scaledFontBold(size: 22)
                         .foregroundColor(Color.buttonColor)
                         .padding(.top, 0.1)
-                        .padding(.bottom, 30)
+                        
                 }
                 
              
@@ -162,8 +162,7 @@ struct TimerView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: geometry.size.width - 50, height: geometry.size.height - 380)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                        .shadow(color: .gray, radius: 2, x: 0, y: 0)
+                       
                         
                         
                         
@@ -182,7 +181,7 @@ struct TimerView: View {
                 ProgressView(value: coinTimeRemainder, total: coinTotal)
                     .scaleEffect(x: 1, y: 2, anchor: .center)
                     .padding(.horizontal,22)
-                    .padding(.top, 20)
+                    .padding(.top, 10)
                     .onAppear{
                         
                         coinTime = Double(timerManager.secondsElapsed)
@@ -315,7 +314,7 @@ struct TimerView: View {
                     
                     // 1개에 12분
                     //720초
-                }.padding(.top, 23)
+                }.padding(.top, 30)
                 } else {
                     VStack{
                         HStack{

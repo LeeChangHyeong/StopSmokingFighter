@@ -100,7 +100,7 @@ struct imageView: View {
         .onTapGesture {
             flipCard ()
         }
-        .position(x:geometry.size.width/2 , y: geometry.size.height/2)
+        .position(x:geometry.size.width/2 , y: geometry.size.height/2 - 30)
         }
         
         
