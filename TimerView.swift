@@ -46,7 +46,7 @@ struct TimerView: View {
     
 //    static var imageName = ImagePick()
 //    static var imageName2 = ImagePick2()
-    var coin: Int { timerManager.secondsElapsed / 36000 }
+    var coin: Int { timerManager.secondsElapsed / 10 }
     // 18000
     @Binding var coinUse:Int
     
@@ -182,7 +182,7 @@ struct TimerView: View {
                 ProgressView(value: coinTimeRemainder, total: coinTotal)
                     .scaleEffect(x: 1, y: 2, anchor: .center)
                     .padding(.horizontal,22)
-                    .padding(.top, 10)
+                    .padding(.top, 20)
                     .onAppear{
                         
                         coinTime = Double(timerManager.secondsElapsed)
@@ -200,7 +200,7 @@ struct TimerView: View {
                     }
                 
                 HStack{
-                    Text("\(String(format:"%.02lf",((coinTimeRemainder/coinTotal)*100))) / 100%")
+                    Text("\(String(format:"%.02lf",((coinTimeRemainder/coinTotal)*100))) / 100%(10시간 = 1코인)")
                         .scaledFont(size: 15)
                         .frame(maxWidth:.infinity, alignment:.leading)
                         .padding(.horizontal, 22)
@@ -243,7 +243,7 @@ struct TimerView: View {
                 
                 
                 
-                
+                if coin - coinUse == 0 {
                 VStack{
                     HStack{
                         Spacer()
@@ -315,7 +315,81 @@ struct TimerView: View {
                     
                     // 1개에 12분
                     //720초
-                }.padding(.top)
+                }.padding(.top, 23)
+                } else {
+                    VStack{
+                        HStack{
+                            Spacer()
+                            VStack{
+                                Image(systemName: "dollarsign.circle.fill")
+                                    .font(.system(size: 30))
+                                    .padding(.bottom, 5)
+                                
+                                Text("\(String(format:"%.01lf",((totalPrice/10000))))만원")
+                                    .foregroundColor(Color.buttonColor)
+                                    .scaledFont(size: 16)
+                                    .padding(.bottom, 0.1)
+                                    
+                                
+                                Text("절약한 돈")
+                                    .foregroundColor(.infoBackColor)
+                                    .opacity(0.5)
+                                    
+                                   
+                                //                            .background(.black)
+                                    .scaledFontBold(size: 15)
+                                
+                            }
+                            
+                            Spacer()
+                            VStack{
+                                Image(systemName: "lungs.fill")
+                                    .font(.system(size: 25))
+                                    .padding(.bottom, 5)
+                                
+                                Text("\(String(format:"%.01lf",((numCig))))개")
+                                    .foregroundColor(Color.buttonColor)
+                                    .scaledFont(size: 16)
+                                    .padding(.bottom, 0.1)
+                                
+                                
+                                Text("아낀 담배")
+                                    .foregroundColor(.infoBackColor)
+                                //                            .background(.black)
+                                    .scaledFontBold(size: 15)
+                                    .opacity(0.5)
+                            }
+                            
+                            Spacer()
+                            
+                            VStack{
+                                Image(systemName: "heart.fill")
+                                    .font(.system(size: 28))
+                                    .padding(.bottom, 5)
+                                
+                                Text("\(String(format:"%.01lf",((numCig*720/60/60))))시간")
+                                    .foregroundColor(Color.buttonColor)
+                                    .scaledFont(size: 16)
+                                    .padding(.bottom, 0.1)
+                                
+                                
+                                Text("수명 연장")
+                                    .foregroundColor(.infoBackColor)
+                                //                            .background(.black)
+                                    .scaledFontBold(size: 15)
+                                    .opacity(0.5)
+                            }
+                            
+                            Spacer()
+                            
+                            
+                        }
+                        .padding(.top, 10)
+                        
+                        // 1개에 12분
+                        //720초
+                    }.padding(.top, 10)
+                }
                 
                 //            Text("금연이 사망 횟수: \(lose)회")
                 //                .foregroundColor(.white)
@@ -348,7 +422,7 @@ struct TimerView: View {
                     goToZero()
                 }
             }
-            .position(x:geometry.size.width/2 , y: geometry.size.height/2)
+            .position(x:geometry.size.width/2 , y: geometry.size.height/2 - 10)
         }
     }
     
