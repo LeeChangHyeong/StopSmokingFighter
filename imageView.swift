@@ -20,20 +20,20 @@ struct CardFront : View {
     let width : CGFloat
     let height : CGFloat
     @Binding var degree : Double
-
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
                 .fill(.white)
                 .frame(width: width, height: height)
                 .shadow(color: .gray, radius: 2, x: 0, y: 0)
-
+            
             Image(imageName)
                 .resizable()
                 .scaledToFit()
                 .frame(width: width, height: height)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
-
+            
         }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }
 }
@@ -44,24 +44,24 @@ struct CardBack : View {
     let width : CGFloat
     let height : CGFloat
     @Binding var degree : Double
-
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
                 .fill(.white)
                 .frame(width: width, height: height)
                 .shadow(color: .gray, radius: 2, x: 0, y: 0)
-
+            
             Image("180")
                 .resizable()
                 .scaledToFill()
                 .frame(width: width, height: height)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
-               
-                
-
+            
+            
+            
         }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
-
+        
     }
 }
 
@@ -75,29 +75,32 @@ struct imageView: View {
         isFlipped = !isFlipped
         if isFlipped {
             withAnimation(.linear(duration: durationAndDelay)) {
-//                backDegree = 90
+                //                backDegree = 90
                 frontDegree = -90
             }
             withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
-//                frontDegree = 0
+                //                frontDegree = 0
                 backDegree = 0
             }
         } else {
             withAnimation(.linear(duration: durationAndDelay)) {
-//                frontDegree = -90
+                //                frontDegree = -90
                 backDegree = 90
             }
             withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
-//                backDegree = 0
+                //                backDegree = 0
                 frontDegree = 0
             }
         }
     }
-//    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    //    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-//    @Environment(\.dismiss) private var dismiss
-    var image:String
+    //    @Environment(\.dismiss) private var dismiss
+    
+    //    var pictureTitle: String
+    //    var pictureText: String
     @Binding var isActive2:Bool
+    var smoke: SmokingImage
     var body: some View {
         
         
@@ -105,25 +108,22 @@ struct imageView: View {
         GeometryReader{ geometry in
             let width : CGFloat = geometry.size.width - 50
             let height : CGFloat = geometry.size.height - 300
-            
-        ZStack{
-            CardBack(imageName: image, width: width, height: height, degree: $backDegree)
-            CardFront(imageName: image, width: width, height: height, degree: $frontDegree)
-//            Button{
-//                self.isActive2 = false
-//            } label: {
-//                Text("아아아")
-//            }
-            
-        }
-        .onDisappear(perform: {
-//            self.isActive2 = false
-           
-        })
-        .onTapGesture {
-            flipCard ()
-        }
-        .position(x:geometry.size.width/2 , y: geometry.size.height/2 - 30)
+            VStack{
+                ZStack{
+                    CardBack(imageName: smoke.imageName, width: width, height: height, degree: $backDegree)
+                    CardFront(imageName: smoke.imageName, width: width, height: height, degree: $frontDegree)
+                }
+                Text("\(smoke.imageTitle)")
+                    .font(.title)
+                    .bold()
+                    .padding(.vertical)
+                Text("\(smoke.imageText)")
+                    .font(.body)
+            }
+            .onTapGesture {
+                flipCard ()
+            }
+            .position(x:geometry.size.width/2 , y: geometry.size.height/2 - 30)
         }
         
         
