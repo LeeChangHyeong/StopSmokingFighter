@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingView: View {
-    @State var isActive : Bool = false
+    @Binding var isActive : Bool
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var timerManager: TimerManager
     @Binding var cigCount: Double?

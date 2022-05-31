@@ -109,11 +109,11 @@ struct imageView: View {
         ZStack{
             CardBack(imageName: image, width: width, height: height, degree: $backDegree)
             CardFront(imageName: image, width: width, height: height, degree: $frontDegree)
-            Button{
-                self.isActive2 = false
-            } label: {
-                Text("아아아")
-            }
+//            Button{
+//                self.isActive2 = false
+//            } label: {
+//                Text("아아아")
+//            }
             
         }
         .onDisappear(perform: {

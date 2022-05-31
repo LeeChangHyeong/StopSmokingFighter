@@ -11,8 +11,9 @@ import Combine
 struct TabBar: View {
     
     
-    
-    
+    @Environment(\.dismiss) private var dismiss
+    @State var isActive : Bool = false
+    @State private var selection = 1
     @StateObject var timerManager = TimerManager()
     @State var showingAlert = false
     @AppStorage("cigCount") var cigCount: Double?
@@ -24,24 +25,27 @@ struct TabBar: View {
     
     
     var body: some View {
-        TabView {
+        TabView(selection: $selection) {
             TimerView(timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice, lose: $lose, touch: $touch, collectedImages: $collectedImages, coinUse: $coinUse)
                 .tabItem {
                     Image(systemName: "house")
                     Text("홈")
                     
-                }
-                
+                }.tag(1)
             
-            SettingView(timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice, showingAlert: $showingAlert, touch: $touch, lose: $lose, collectedImages: $collectedImages)
+            
+            SettingView(isActive: $isActive, timerManager: timerManager, cigCount: $cigCount, cigPrice: $cigPrice, showingAlert: $showingAlert, touch: $touch, lose: $lose, collectedImages: $collectedImages)
                 .tabItem {
-        
+                    
                     Image(systemName: "gearshape")
                     Text("설정/정보")
-                }
-        }        .accentColor(Color.intColor)
-            
-            
+                }.tag(2)
+                
+        }.onTapGesture(count: 2) {
+            isActive = false
+        }
+        .accentColor(Color.intColor)
+        
             .onAppear{
                 
                 let appearance = UITabBarAppearance()
@@ -68,7 +72,7 @@ extension Array: RawRepresentable where Element: Codable {
         }
         self = result
     }
-
+    
     public var rawValue: String {
         guard let data = try? JSONEncoder().encode(self),
               let result = String(data: data, encoding: .utf8)

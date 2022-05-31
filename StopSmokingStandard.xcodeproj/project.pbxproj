@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3212D40C2845E3BE00B24FC8 /* dataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3212D40B2845E3BE00B24FC8 /* dataModel.swift */; };
 		322AF8BA2827ADC800632AB5 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AF8B92827ADC800632AB5 /* OnboardingPageView.swift */; };
 		322AF8BC2827ADE600632AB5 /* OnboardingLastPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AF8BB2827ADE600632AB5 /* OnboardingLastPageView.swift */; };
 		322AF8BE2827ADFB00632AB5 /* OnboardingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AF8BD2827ADFB00632AB5 /* OnboardingTabView.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3212D40B2845E3BE00B24FC8 /* dataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataModel.swift; sourceTree = "<group>"; };
 		322AF8B92827ADC800632AB5 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		322AF8BB2827ADE600632AB5 /* OnboardingLastPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLastPageView.swift; sourceTree = "<group>"; };
 		322AF8BD2827ADFB00632AB5 /* OnboardingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				32F41A4D282661190030E0BF /* fightingProgressViewStyle.swift */,
 				32793161283B7381008918EC /* imageView.swift */,
 				3286D1632834FA27006D4A75 /* galleryView.swift */,
+				3212D40B2845E3BE00B24FC8 /* dataModel.swift */,
 				322AF8BF2827AE3A00632AB5 /* Onboarding */,
 				32776FEB2823D4E300927C5B /* UserCheckView.swift */,
 				32776FBC2823CCD700927C5B /* StopSmokingStandard */,
@@ -347,6 +350,7 @@
 				32793162283B7381008918EC /* imageView.swift in Sources */,
 				32776FEA2823D35F00927C5B /* TimerView.swift in Sources */,
 				322AF8BC2827ADE600632AB5 /* OnboardingLastPageView.swift in Sources */,
+				3212D40C2845E3BE00B24FC8 /* dataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
