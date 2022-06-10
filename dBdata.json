@@ -104,5 +104,20 @@
     "imageTitle": "\"죄송합니다22\"",
     "imageText": "디자이너를 못 구했어요"
 },
+{
+    "imageName": "p21",
+    "imageTitle": "\"느려\"",
+    "imageText": "금연 생각보다 쉽죠?"
+},
+{
+    "imageName": "p22",
+    "imageTitle": "\"느리다니까\"",
+    "imageText": "개발자 그림 괜찮죠?"
+},
+{
+    "imageName": "p23",
+    "imageTitle": "\"디자이너 구해요\"",
+    "imageText": "그림 너무 어려워요,,"
+}
 
 ]

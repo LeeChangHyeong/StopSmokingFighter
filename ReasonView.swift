@@ -262,6 +262,11 @@ struct ReasonView: View {
                         
                     }
                     
+                Text("[출처]: https://www.hidoc.co.kr/healthstory/news/C0000613044(하이닥)")
+                        
+                     
+                        
+                    
                     
                     
                 }

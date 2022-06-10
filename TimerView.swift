@@ -7,6 +7,7 @@
 import Foundation
 import SwiftUI
 import UIKit
+import GoogleMobileAds
 
 extension Color {
     static let buttonColor = Color("buttonColor")
@@ -20,7 +21,7 @@ extension Color {
 struct TimerView: View {
     // 변경값을 관찰하기 위해 ObservaleObject 추가
     
-    
+    var id = "ca-app-pub-3940256099942544/2934735716"
     
     @ObservedObject var timerManager: TimerManager
     var days: Int { timerManager.secondsElapsed / (3600 * 24)}
@@ -86,6 +87,7 @@ struct TimerView: View {
 //            let width : CGFloat = geometry.size.width - 50
 //            let height : CGFloat = geometry.size.height - 380
             VStack {
+                
                 Text(String(format:"금연한지 %02i일", days))
                     .frame(maxWidth:.infinity)
                     .scaledFontBold(size: 20)
@@ -223,7 +225,7 @@ struct TimerView: View {
                     
                         // 갱신 버튼
                         Button{
-                            let pictureName4 = Int.random(in:1...20)
+                            let pictureName4 = Int.random(in:1...23)
                             pictureName3 = "p" + String(pictureName4)
                             addImage()
                             coinUse = coinUse + 1
@@ -305,12 +307,13 @@ struct TimerView: View {
                                 .scaledFontBold(size: 15)
                                 .opacity(0.5)
                         }
-                        
                         Spacer()
                         
                         
                     }
                     .padding(.top, 10)
+                    BannerAd(adUnitId: id)
+                        .frame(width: UIScreen.main.bounds.width, height: 44, alignment: .center)
                     
                     // 1개에 12분
                     //720초
@@ -341,6 +344,7 @@ struct TimerView: View {
                             }
                             
                             Spacer()
+                           
                             VStack{
                                 Image(systemName: "lungs.fill")
                                     .font(.system(size: 25))
@@ -384,7 +388,8 @@ struct TimerView: View {
                             
                         }
                         .padding(.top, 10)
-                        
+                        BannerAd(adUnitId: id)
+                            .frame(width: UIScreen.main.bounds.width, height: 44, alignment: .center)
                         // 1개에 12분
                         //720초
                     }.padding(.top, 10)

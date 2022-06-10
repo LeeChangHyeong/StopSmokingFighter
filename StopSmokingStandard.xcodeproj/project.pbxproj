@@ -15,6 +15,9 @@
 		322AF8BE2827ADFB00632AB5 /* OnboardingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AF8BD2827ADFB00632AB5 /* OnboardingTabView.swift */; };
 		322AF8C12827C34400632AB5 /* TipPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AF8C02827C34400632AB5 /* TipPage.swift */; };
 		322AF8C42827C73A00632AB5 /* LaunchPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AF8C32827C73A00632AB5 /* LaunchPageView.swift */; };
+		32368D272853719D00E5AA97 /* AD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32368D262853719D00E5AA97 /* AD.swift */; };
+		32368D292853720100E5AA97 /* uikitToSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32368D282853720100E5AA97 /* uikitToSwiftUI.swift */; };
+		32368D2C2853749000E5AA97 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 32368D2B2853749000E5AA97 /* GoogleMobileAds */; };
 		32776FBE2823CCD700927C5B /* StopSmokingStandardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FBD2823CCD700927C5B /* StopSmokingStandardApp.swift */; };
 		32776FC02823CCD700927C5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32776FBF2823CCD700927C5B /* ContentView.swift */; };
 		32776FC22823CCD700927C5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32776FC12823CCD700927C5B /* Assets.xcassets */; };
@@ -31,6 +34,7 @@
 		32CDFE18282A935500DD7033 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CDFE17282A935500DD7033 /* Font.swift */; };
 		32CDFE1B282BD66400DD7033 /* FontBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CDFE1A282BD66400DD7033 /* FontBold.swift */; };
 		32CDFE1D282BD6F200DD7033 /* Fail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CDFE1C282BD6F200DD7033 /* Fail.swift */; };
+		32F0036E28535A3800FAF350 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F0036D28535A3800FAF350 /* File.swift */; };
 		32F13EB2283BBFEB00374A33 /* OnboardingPageView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F13EB1283BBFEA00374A33 /* OnboardingPageView2.swift */; };
 		32F41A48282627040030E0BF /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F41A47282627040030E0BF /* TabBar.swift */; };
 		32F41A4A282633ED0030E0BF /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F41A49282633ED0030E0BF /* SettingView.swift */; };
@@ -64,6 +68,8 @@
 		322AF8BD2827ADFB00632AB5 /* OnboardingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabView.swift; sourceTree = "<group>"; };
 		322AF8C02827C34400632AB5 /* TipPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipPage.swift; sourceTree = "<group>"; };
 		322AF8C32827C73A00632AB5 /* LaunchPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPageView.swift; sourceTree = "<group>"; };
+		32368D262853719D00E5AA97 /* AD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AD.swift; sourceTree = "<group>"; };
+		32368D282853720100E5AA97 /* uikitToSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uikitToSwiftUI.swift; sourceTree = "<group>"; };
 		32776FBA2823CCD700927C5B /* StopSmokingStandard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopSmokingStandard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32776FBD2823CCD700927C5B /* StopSmokingStandardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopSmokingStandardApp.swift; sourceTree = "<group>"; };
 		32776FBF2823CCD700927C5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +91,7 @@
 		32CDFE17282A935500DD7033 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		32CDFE1A282BD66400DD7033 /* FontBold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontBold.swift; sourceTree = "<group>"; };
 		32CDFE1C282BD6F200DD7033 /* Fail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fail.swift; sourceTree = "<group>"; };
+		32F0036D28535A3800FAF350 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		32F13EB1283BBFEA00374A33 /* OnboardingPageView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView2.swift; sourceTree = "<group>"; };
 		32F41A47282627040030E0BF /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		32F41A49282633ED0030E0BF /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -97,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32368D2C2853749000E5AA97 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +142,9 @@
 				3279315F28368E53008918EC /* InfoPlist.strings */,
 				32776FE72823D10A00927C5B /* TimerManager.swift */,
 				322AF8C32827C73A00632AB5 /* LaunchPageView.swift */,
+				32368D262853719D00E5AA97 /* AD.swift */,
+				32368D282853720100E5AA97 /* uikitToSwiftUI.swift */,
+				32F0036D28535A3800FAF350 /* File.swift */,
 				32F41A47282627040030E0BF /* TabBar.swift */,
 				32776FE92823D35F00927C5B /* TimerView.swift */,
 				32F41A49282633ED0030E0BF /* SettingView.swift */,
@@ -220,6 +231,9 @@
 			dependencies = (
 			);
 			name = StopSmokingStandard;
+			packageProductDependencies = (
+				32368D2B2853749000E5AA97 /* GoogleMobileAds */,
+			);
 			productName = StopSmokingStandard;
 			productReference = 32776FBA2823CCD700927C5B /* StopSmokingStandard.app */;
 			productType = "com.apple.product-type.application";
@@ -293,6 +307,9 @@
 				ko,
 			);
 			mainGroup = 32776FB12823CCD600927C5B;
+			packageReferences = (
+				32368D2A2853749000E5AA97 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			productRefGroup = 32776FBB2823CCD700927C5B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -343,12 +360,15 @@
 				32776FEC2823D4E400927C5B /* UserCheckView.swift in Sources */,
 				32776FC02823CCD700927C5B /* ContentView.swift in Sources */,
 				32F13EB2283BBFEB00374A33 /* OnboardingPageView2.swift in Sources */,
+				32F0036E28535A3800FAF350 /* File.swift in Sources */,
 				3286D1642834FA27006D4A75 /* galleryView.swift in Sources */,
+				32368D272853719D00E5AA97 /* AD.swift in Sources */,
 				322AF8C12827C34400632AB5 /* TipPage.swift in Sources */,
 				32F41A4A282633ED0030E0BF /* SettingView.swift in Sources */,
 				322AF8C42827C73A00632AB5 /* LaunchPageView.swift in Sources */,
 				32F41A4E282661190030E0BF /* fightingProgressViewStyle.swift in Sources */,
 				32CDFE1B282BD66400DD7033 /* FontBold.swift in Sources */,
+				32368D292853720100E5AA97 /* uikitToSwiftUI.swift in Sources */,
 				32776FBE2823CCD700927C5B /* StopSmokingStandardApp.swift in Sources */,
 				322AF8BE2827ADFB00632AB5 /* OnboardingTabView.swift in Sources */,
 				32F41A48282627040030E0BF /* TabBar.swift in Sources */,
@@ -553,7 +573,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -587,7 +607,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -703,6 +723,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32368D2A2853749000E5AA97 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		32368D2B2853749000E5AA97 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32368D2A2853749000E5AA97 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 32776FB22823CCD600927C5B /* Project object */;
 }

@@ -16,13 +16,14 @@ struct SettingView: View {
     @Binding var showingAlert: Bool
     @Binding var touch: Bool
     @Binding var lose: Int
-    
+    var id = "ca-app-pub-3940256099942544/2934735716"
     @Binding var collectedImages: [String]
     
     @State var showAppDescription: Bool = true
     
     var body: some View {
         NavigationView{
+            VStack{
             List{
                 Section(header: Text("설정")){
                     NavigationLink(destination: UserCheckView(cigCount: $cigCount, cigPrice: $cigPrice)){
@@ -67,8 +68,14 @@ struct SettingView: View {
                     }
                     
                 }.foregroundColor(.black)
+                
             }
             .navigationBarHidden(true)
+                Spacer()
+                BannerAd(adUnitId: id)
+                    .frame(width: UIScreen.main.bounds.width, height: 44, alignment: .center)
+                    .padding(.bottom)
+            }
             
             
          
