@@ -24,12 +24,13 @@ Insert gif or link to demo
 
 
 ## :fireworks: Screenshots
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
+![App Screenshot][url=https://postimg.cc/zbQkS0Kb][img]https://i.postimg.cc/zbQkS0Kb/1.png[/img][/url]
+![App Screenshot][url=https://postimg.cc/LhrTJQmG][img]https://i.postimg.cc/LhrTJQmG/2.png[/img][/url]
+![App Screenshot][url=https://postimg.cc/9rZBZPM0][img]https://i.postimg.cc/9rZBZPM0/3.png[/img][/url]
+![App Screenshot][url=https://postimg.cc/MXc5KJJy][img]https://i.postimg.cc/MXc5KJJy/8.png[/img][/url]
+![App Screenshot][url=https://postimg.cc/YvxfypQw][img]https://i.postimg.cc/YvxfypQw/5.png[/img][/url]
+![App Screenshot][url=https://postimg.cc/MnwmDcMD][img]https://i.postimg.cc/MnwmDcMD/6.png[/img][/url]
+![App Screenshot][url=https://postimg.cc/CZLC3W4n][img]https://i.postimg.cc/CZLC3W4n/7.png[/img][/url]
 
 
 ## :sparkles: Skills & Tech Stack
