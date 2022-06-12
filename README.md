@@ -1,5 +1,5 @@
 
-![Logo](https://dummyimage.com/1000x300/000/fff.png)
+![Logo](https://ibb.co/51613gF)
 
 
 # :iphone: Project Title
@@ -17,7 +17,7 @@ A brief description of what this project does and who it's for
 
 ## :people_hugging: Authors
 
-- [@YourName](https://www.github.com/) | [@YourName](https://www.github.com/) | [@YourName](https://www.github.com/) | [@YourName](https://www.github.com/) | [@YourName](https://www.github.com/) | [@YourName](https://www.github.com/)
+- [changBro](https://github.com/LeeChangHyeong)
 
 
 ## :framed_picture: Demo
