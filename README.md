@@ -20,7 +20,7 @@
 
 
 ## :fireworks: Screenshots
-<img src="https://user-images.githubusercontent.com/71262367/173230572-a6c3866f-5654-431e-be4b-a8eb126b2bc1.png" width= "250" height="500"/><img src="https://user-images.githubusercontent.com/71262367/173230925-c9b42699-c61f-4201-a386-55b7002bea7f.png" width= "250" height="500"/><img src="https://user-images.githubusercontent.com/71262367/173230572-a6c3866f-5654-431e-be4b-a8eb126b2bc1.png" width= "250" height="500"/><img src="https://user-images.githubusercontent.com/71262367/173230572-a6c3866f-5654-431e-be4b-a8eb126b2bc1.png" width= "250" height="500"/><img src="https://user-images.githubusercontent.com/71262367/173230572-a6c3866f-5654-431e-be4b-a8eb126b2bc1.png" width= "250" height="500"/><img src="https://user-images.githubusercontent.com/71262367/173230572-a6c3866f-5654-431e-be4b-a8eb126b2bc1.png" width= "250" height="500"/><img src="https://user-images.githubusercontent.com/71262367/173230572-a6c3866f-5654-431e-be4b-a8eb126b2bc1.png" width= "250" height="500"/>
+<img src="https://user-images.githubusercontent.com/71262367/173230572-a6c3866f-5654-431e-be4b-a8eb126b2bc1.png" width= "250" height="500"/> <img src="https://user-images.githubusercontent.com/71262367/173230925-c9b42699-c61f-4201-a386-55b7002bea7f.png" width= "250" height="500"/> <img src="https://user-images.githubusercontent.com/71262367/173231345-f1c87e7b-9697-4230-83ca-70b58750b8b9.png" width= "250" height="500"/> <img src="https://user-images.githubusercontent.com/71262367/173231376-21ec57ff-465c-4f32-809a-19b1791246eb.png" width= "250" height="500"/> <img src="https://user-images.githubusercontent.com/71262367/173231401-2728f923-1c94-4494-a363-23187e76f5d4.png" width= "250" height="500"/> <img src="https://user-images.githubusercontent.com/71262367/173231421-295efdf7-cce4-42ae-862b-8b363f746ad1.png" width= "250" height="500"/> <img src="https://user-images.githubusercontent.com/71262367/173231425-2db9d8a6-986a-42de-9ab8-79a77a5397ef.png" width= "250" height="500"/>
 
 
 
@@ -29,11 +29,3 @@
 ## :sparkles: Skills & Tech Stack
 - SwiftUI
 - UIKit
-
-## :books: Documentation
-[Documentation](https://linktodocumentation)
-
-
-## :lock_with_ink_pen: License
-[MIT](https://choosealicense.com/licenses/mit/)
-
