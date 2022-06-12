@@ -24,7 +24,7 @@ Insert gif or link to demo
 
 
 ## :fireworks: Screenshots
-<img width="200*500" src="https://user-images.githubusercontent.com/71262367/173230572-a6c3866f-5654-431e-be4b-a8eb126b2bc1.png/"
+<img width="80%" src="https://user-images.githubusercontent.com/71262367/173230572-a6c3866f-5654-431e-be4b-a8eb126b2bc1.png/"
 ![App Screenshot](<a href="https://postimg.cc/zbQkS0Kb" target="_blank"><img src="https://i.postimg.cc/zbQkS0Kb/1.png" alt="1"/></a><br/><br/>)
 ![App Screenshot][url=https://postimg.cc/LhrTJQmG][img]https://i.postimg.cc/LhrTJQmG/2.png[/img][/url]
 ![App Screenshot][url=https://postimg.cc/9rZBZPM0][img]https://i.postimg.cc/9rZBZPM0/3.png[/img][/url]
