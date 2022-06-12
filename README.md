@@ -24,7 +24,7 @@ Insert gif or link to demo
 
 
 ## :fireworks: Screenshots
-<img src="https://user-images.githubusercontent.com/71262367/173230572-a6c3866f-5654-431e-be4b-a8eb126b2bc1.png" width= "200" height="500"/>
+<img src="https://user-images.githubusercontent.com/71262367/173230572-a6c3866f-5654-431e-be4b-a8eb126b2bc1.png" width= "250" height="500"/>
 
 
 
