@@ -1,6 +1,6 @@
 
 # Logo
-[![image.png](https://i.postimg.cc/x8wHSTQf/image.png width="200" height="200")](https://postimg.cc/YLxj67jZ)
+[![image.png](https://i.postimg.cc/x8wHSTQf/image.png)](https://postimg.cc/YLxj67jZ)
 
 
 # :iphone: 금연파이터
