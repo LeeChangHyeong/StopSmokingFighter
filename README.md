@@ -31,6 +31,7 @@ Insert gif or link to demo
 ![App Screenshot][url=https://postimg.cc/YvxfypQw][img]https://i.postimg.cc/YvxfypQw/5.png[/img][/url]
 ![App Screenshot][url=https://postimg.cc/MnwmDcMD][img]https://i.postimg.cc/MnwmDcMD/6.png[/img][/url]
 ![App Screenshot][url=https://postimg.cc/CZLC3W4n][img]https://i.postimg.cc/CZLC3W4n/7.png[/img][/url]
+![1](https://user-images.githubusercontent.com/71262367/173230291-007e6a6d-82b3-4b0d-8a8b-6da12249819e.png)
 
 
 ## :sparkles: Skills & Tech Stack
