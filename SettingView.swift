@@ -16,7 +16,7 @@ struct SettingView: View {
     @Binding var showingAlert: Bool
     @Binding var touch: Bool
     @Binding var lose: Int
-    var id = "ca-app-pub-3940256099942544/2934735716"
+    var id = ""
     @Binding var collectedImages: [String]
     
     @State var showAppDescription: Bool = true

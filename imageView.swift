@@ -33,11 +33,11 @@ struct CardFront : View {
                 .scaledToFit()
                 .frame(width: width, height: height)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
+                .shadow(color: .gray, radius: 2, x: 0, y: 0)
             
         }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }
 }
-
 
 struct CardBack : View {
     let imageName: String
@@ -93,18 +93,9 @@ struct imageView: View {
             }
         }
     }
-    //    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
-    //    @Environment(\.dismiss) private var dismiss
-    
-    //    var pictureTitle: String
-    //    var pictureText: String
     @Binding var isActive2:Bool
     var smoke: SmokingImage
     var body: some View {
-        
-        
-        
         GeometryReader{ geometry in
             let width : CGFloat = geometry.size.width - 50
             let height : CGFloat = geometry.size.height - 300

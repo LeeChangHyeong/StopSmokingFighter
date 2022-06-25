@@ -34,7 +34,6 @@
 		32CDFE18282A935500DD7033 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CDFE17282A935500DD7033 /* Font.swift */; };
 		32CDFE1B282BD66400DD7033 /* FontBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CDFE1A282BD66400DD7033 /* FontBold.swift */; };
 		32CDFE1D282BD6F200DD7033 /* Fail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CDFE1C282BD6F200DD7033 /* Fail.swift */; };
-		32F0036E28535A3800FAF350 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F0036D28535A3800FAF350 /* File.swift */; };
 		32F13EB2283BBFEB00374A33 /* OnboardingPageView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F13EB1283BBFEA00374A33 /* OnboardingPageView2.swift */; };
 		32F41A48282627040030E0BF /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F41A47282627040030E0BF /* TabBar.swift */; };
 		32F41A4A282633ED0030E0BF /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F41A49282633ED0030E0BF /* SettingView.swift */; };
@@ -91,7 +90,6 @@
 		32CDFE17282A935500DD7033 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		32CDFE1A282BD66400DD7033 /* FontBold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontBold.swift; sourceTree = "<group>"; };
 		32CDFE1C282BD6F200DD7033 /* Fail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fail.swift; sourceTree = "<group>"; };
-		32F0036D28535A3800FAF350 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		32F13EB1283BBFEA00374A33 /* OnboardingPageView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView2.swift; sourceTree = "<group>"; };
 		32F41A47282627040030E0BF /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		32F41A49282633ED0030E0BF /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 				322AF8C32827C73A00632AB5 /* LaunchPageView.swift */,
 				32368D262853719D00E5AA97 /* AD.swift */,
 				32368D282853720100E5AA97 /* uikitToSwiftUI.swift */,
-				32F0036D28535A3800FAF350 /* File.swift */,
 				32F41A47282627040030E0BF /* TabBar.swift */,
 				32776FE92823D35F00927C5B /* TimerView.swift */,
 				32F41A49282633ED0030E0BF /* SettingView.swift */,
@@ -360,7 +357,6 @@
 				32776FEC2823D4E400927C5B /* UserCheckView.swift in Sources */,
 				32776FC02823CCD700927C5B /* ContentView.swift in Sources */,
 				32F13EB2283BBFEB00374A33 /* OnboardingPageView2.swift in Sources */,
-				32F0036E28535A3800FAF350 /* File.swift in Sources */,
 				3286D1642834FA27006D4A75 /* galleryView.swift in Sources */,
 				32368D272853719D00E5AA97 /* AD.swift in Sources */,
 				322AF8C12827C34400632AB5 /* TipPage.swift in Sources */,
@@ -568,12 +564,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.03;
 				PRODUCT_BUNDLE_IDENTIFIER = com.changBro.StopSmokingStandard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -602,12 +598,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.03;
 				PRODUCT_BUNDLE_IDENTIFIER = com.changBro.StopSmokingStandard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
