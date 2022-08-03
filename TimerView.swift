@@ -21,7 +21,7 @@ extension Color {
 struct TimerView: View {
     // 변경값을 관찰하기 위해 ObservaleObject 추가
     
-    var id = ""
+    var id = "ca-app-pub-1964190124023876/3538761856"
     
     @ObservedObject var timerManager: TimerManager
     var days: Int { timerManager.secondsElapsed / (3600 * 24)}
